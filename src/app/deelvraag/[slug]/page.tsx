@@ -29,6 +29,7 @@ import {
   Dv2Doelgroep,
   Dv3Concurrentie,
   Dv3Plan,
+  Dv3BringABuddy,
   Dv3Probleem,
   Dv3HuidigeSituatie,
   Dv3Uitvoering,
@@ -130,6 +131,7 @@ export default async function DeelvraagPage({
                   {/* Interactive components for Deelvraag 3 */}
                   {slug === "3" && section.id === "dv3-concurrentie" && <Dv3Concurrentie />}
                   {slug === "3" && section.id === "dv3-plan" && <Dv3Plan />}
+                  {slug === "3" && section.id === "dv3-plan" && <Dv3BringABuddy />}
                   {slug === "3" && section.id === "dv3-probleem" && <Dv3Probleem />}
                   {slug === "3" && section.id === "dv3-huidige-situatie" && <Dv3HuidigeSituatie />}
                   {slug === "3" && section.id === "dv3-uitvoering" && <Dv3Uitvoering />}

@@ -589,9 +589,9 @@ export function Dv3Plan() {
             "Een duidelijke PDF met beschikbaarheidseisen zodat personeel weet wat er verwacht wordt op piekmomenten.",
         },
         {
-          title: "Doorverwijzingsbonus voor medewerkers",
+          title: "Bring a Buddy programma",
           description:
-            "Eenmalige bonus voor medewerkers die iemand doorverwijzen die minimaal 3 maanden in dienst blijft en voldoet aan de beschikbaarheidsrichtlijnen.",
+            "Medewerkers verdienen tot €500 door vrienden aan te dragen. Bonus in 3 stappen: €25 na contract, €25 na 8 diensten, €50 na 6 maanden. Max 5 buddy's per medewerker.",
         },
         {
           title: "Behoud van huidige medewerkers",
@@ -605,6 +605,44 @@ export function Dv3Plan() {
         },
       ]}
     />
+  );
+}
+
+export function Dv3BringABuddy() {
+  return (
+    <>
+      <ProcessTimeline
+        title="Bring a Buddy — bonusstructuur"
+        steps={[
+          {
+            title: "€25 — Contract getekend + proefdag geslaagd",
+            description: "De buddy heeft het contract ondertekend en is geslaagd voor de proefdag. De eerste bonus wordt direct uitbetaald aan de doorverwijzer.",
+          },
+          {
+            title: "€25 — 8 diensten in eerste 2 maanden",
+            description: "De buddy heeft minimaal 8 diensten gedraaid in de eerste twee maanden. Dit toont aan dat de buddy serieus en betrouwbaar is.",
+          },
+          {
+            title: "€50 — 6 maanden in dienst + beschikbaarheid",
+            description: "De buddy is na zes maanden nog in dienst en voldoet aan de beschikbaarheidseisen. De laatste en grootste bonus wordt uitbetaald.",
+          },
+        ]}
+      />
+      <KeyFigureRow
+        figures={[
+          { value: 100, prefix: "€", format: "number", label: "Per buddy", description: "€25 + €25 + €50 in drie stappen" },
+          { value: 5, format: "number", label: "Max buddy's", description: "Per medewerker maximaal 5 doorverwijzingen" },
+          { value: 500, prefix: "€", format: "number", label: "Max bonus", description: "Totaal te verdienen per medewerker" },
+        ]}
+      />
+      <CTABanner
+        title="Bekijk de Bring a Buddy landingspagina"
+        description="Het programma heeft een eigen landingspagina op werkenbijcascade.nl met uitleg, voorwaarden en deelmogelijkheden via WhatsApp en een persoonlijke link."
+        buttonText="Bekijk de landingspagina"
+        href="https://werkenbijcascade.nl/bring-a-buddy"
+        variant="green"
+      />
+    </>
   );
 }
 
