@@ -5,6 +5,7 @@ const deelvragen = [
   { slug: "1", title: "Verblijfsrecreanten" },
   { slug: "2", title: "B2B Markt" },
   { slug: "3", title: "Personeel" },
+  { slug: "bonus", title: "Cadeaubon-systeem" },
 ];
 
 export function DeelvraagNav({ currentSlug }: { currentSlug: string }) {

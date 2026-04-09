@@ -1,6 +1,6 @@
 "use client";
 
-import { Handshake, Eye, Globe, Focus, HeartHandshake, Sparkles, Briefcase, UserCheck, Building2, User, UserCog, Clock, GraduationCap, Heart, List, BookOpen, DollarSign, Users2, Settings, FileText, LayoutDashboard, FormInput } from "lucide-react";
+import { Handshake, Eye, Globe, Focus, HeartHandshake, Sparkles, Briefcase, UserCheck, Building2, User, UserCog, Clock, GraduationCap, Heart, List, BookOpen, DollarSign, Users2, Settings, FileText, LayoutDashboard, FormInput, Gift, Palette, Mail, Send, Languages, ShoppingCart, CreditCard, UserPlus, BarChart3 } from "lucide-react";
 
 import { KeyFigureRow } from "@/components/interactive/KeyFigureRow";
 import { RevenueCalculation } from "@/components/interactive/RevenueCalculation";
@@ -680,5 +680,78 @@ export function Dv3Uitvoering() {
         variant="gold"
       />
     </>
+  );
+}
+
+// ─── Bonusvraag ─────────────────────────────────────────────────────────────
+
+export function BonusKortingen() {
+  return (
+    <ChecklistCard
+      title="Mogelijkheden van het kortingssysteem"
+      items={[
+        { label: "Percentagekorting of vast bedrag", done: true },
+        { label: "Optionele kortingscode of automatisch toepassen", done: true },
+        { label: "Minimaal bestelbedrag instellen", done: true },
+        { label: "Maximale korting per bestelling", done: true },
+        { label: "Geldigheidsperiode instellen", done: true },
+        { label: "Maximaal aantal keer gebruiken", done: true },
+        { label: "Koppelen aan specifieke arrangementen", done: true },
+        { label: "Automatische tracking van gebruik", done: true },
+      ]}
+    />
+  );
+}
+
+export function BonusPlatform() {
+  return (
+    <FeatureShowcase
+      title="Functies van het platform"
+      features={[
+        { icon: Gift, title: "Drie kaarttypen", description: "Waardebon, open arrangement of vast arrangement" },
+        { icon: Palette, title: "Personalisatie", description: "Eigen foto, persoonlijk bericht en templates per gelegenheid" },
+        { icon: Mail, title: "Digitale levering", description: "Direct per e-mail als PDF met unieke code" },
+        { icon: Send, title: "Fysieke levering", description: "Geprint als ansichtkaart en per post bezorgd" },
+        { icon: Languages, title: "Vier talen", description: "Nederlands, Engels, Duits en Frans" },
+        { icon: ShoppingCart, title: "Extra's toevoegen", description: "Eten, drinken en excursies bij elk arrangement" },
+      ]}
+    />
+  );
+}
+
+export function BonusVoordelen() {
+  return (
+    <ThreePillars
+      title="Drie belangrijkste voordelen"
+      pillars={[
+        {
+          icon: CreditCard,
+          title: "Directe omzet",
+          description: "Cadeaukaarten worden vooraf betaald. Dit verbetert de cashflow, vooral in het laagseizoen.",
+        },
+        {
+          icon: UserPlus,
+          title: "Nieuwe klanten",
+          description: "Elke cadeaukaart brengt potentieel een nieuwe klant binnen via het netwerk van bestaande klanten.",
+        },
+        {
+          icon: BarChart3,
+          title: "Klantdata",
+          description: "Het systeem registreert koopgedrag, populaire arrangementen en inwissel-patronen.",
+        },
+      ]}
+    />
+  );
+}
+
+export function BonusCTA() {
+  return (
+    <CTABanner
+      title="Bekijk het cadeaubon-platform"
+      description="Het volledige cadeaubon-systeem is live en functioneel. Bekijk de webshop, personaliseer een cadeaukaart en ervaar de volledige gebruikerservaring."
+      buttonText="Bezoek cadeaukaart.varenbijcascade.com"
+      href="https://cadeaukaart.varenbijcascade.com"
+      variant="navy"
+    />
   );
 }

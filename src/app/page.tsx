@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Ship, Briefcase, Users, ArrowRight } from "lucide-react";
+import { Ship, Briefcase, Users, ArrowRight, Gift } from "lucide-react";
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -38,6 +38,15 @@ const deelvraagCards = [
     color: "#8E7649",       // groep
     bgColor: "#E8E1D6",     // groep-bg
   },
+  {
+    number: 4,
+    slug: "bonus",
+    icon: Gift,
+    title: "Cadeaubon-systeem",
+    question: "Hoe kan een digitaal cadeaubon-systeem bijdragen aan de groei van Rederij Cascade en de uitvoering van de marketingstrategieën uit dit onderzoek?",
+    color: "#1D5577",
+    bgColor: "#ABC9D4",
+  },
 ];
 
 export default function HomePage() {
@@ -74,10 +83,10 @@ export default function HomePage() {
           <div className="container-wide">
             <FadeIn>
               <h2 className="font-heading text-2xl md:text-3xl text-cascade-navy mb-10 text-center">
-                De drie deelvragen
+                Het onderzoek
               </h2>
             </FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {deelvraagCards.map((card, i) => {
                 const Icon = card.icon;
                 return (
@@ -93,7 +102,7 @@ export default function HomePage() {
                         <Icon size={24} />
                       </div>
                       <span className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
-                        Deelvraag {card.number}
+                        {card.number === 4 ? "Bonusvraag" : `Deelvraag ${card.number}`}
                       </span>
                       <h3 className="font-heading text-xl font-semibold text-cascade-navy mb-4">
                         {card.title}

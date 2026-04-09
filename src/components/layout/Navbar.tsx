@@ -12,6 +12,7 @@ const links = [
   { href: "/deelvraag/1", label: "Verblijfsrecreanten" },
   { href: "/deelvraag/2", label: "B2B Markt" },
   { href: "/deelvraag/3", label: "Personeel" },
+  { href: "/deelvraag/bonus", label: "Cadeaubon" },
 ];
 
 export function Navbar() {

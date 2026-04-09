@@ -48,4 +48,16 @@ export const deelvraagMeta = [
       bg: "#E8E1D6",
     },
   },
+  {
+    slug: "bonus",
+    number: 4,
+    shortTitle: "Cadeaubon-systeem",
+    category: "seizoensspecials",
+    badgeVariant: "teal" as const,
+    colors: {
+      primary: "#1D5577",
+      secondary: "#58819A",
+      bg: "#ABC9D4",
+    },
+  },
 ];

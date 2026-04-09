@@ -10,6 +10,7 @@ import { DeelvraagNav } from "@/components/layout/DeelvraagNav";
 import { deelvraag1 } from "@/content/deelvraag1";
 import { deelvraag2 } from "@/content/deelvraag2";
 import { deelvraag3 } from "@/content/deelvraag3";
+import { bonus } from "@/content/bonus";
 import type { DeelvraagContent } from "@/content/types";
 import { deelvraagMeta } from "@/content/metadata";
 
@@ -31,16 +32,21 @@ import {
   Dv3Probleem,
   Dv3HuidigeSituatie,
   Dv3Uitvoering,
+  BonusPlatform,
+  BonusKortingen,
+  BonusVoordelen,
+  BonusCTA,
 } from "./DeelvraagInteractive";
 
 const contentMap: Record<string, DeelvraagContent> = {
   "1": deelvraag1,
   "2": deelvraag2,
   "3": deelvraag3,
+  "bonus": bonus,
 };
 
 export function generateStaticParams() {
-  return [{ slug: "1" }, { slug: "2" }, { slug: "3" }];
+  return [{ slug: "1" }, { slug: "2" }, { slug: "3" }, { slug: "bonus" }];
 }
 
 export async function generateMetadata({
@@ -127,6 +133,12 @@ export default async function DeelvraagPage({
                   {slug === "3" && section.id === "dv3-probleem" && <Dv3Probleem />}
                   {slug === "3" && section.id === "dv3-huidige-situatie" && <Dv3HuidigeSituatie />}
                   {slug === "3" && section.id === "dv3-uitvoering" && <Dv3Uitvoering />}
+
+                  {/* Interactive components for Bonusvraag */}
+                  {slug === "bonus" && section.id === "bonus-platform" && <BonusPlatform />}
+                  {slug === "bonus" && section.id === "bonus-kortingen" && <BonusKortingen />}
+                  {slug === "bonus" && section.id === "bonus-voordelen" && <BonusVoordelen />}
+                  {slug === "bonus" && section.id === "bonus-techniek" && <BonusCTA />}
                 </div>
               ))}
 
