@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Handshake, Eye, Globe, Focus, HeartHandshake, Sparkles, Briefcase, UserCheck, Building2, User, UserCog, Clock, GraduationCap, Heart, List, BookOpen, DollarSign, Users2, Settings, FileText, LayoutDashboard, FormInput, Gift, Palette, Mail, Send, Languages, ShoppingCart, CreditCard, UserPlus, BarChart3 } from "lucide-react";
 
 import { KeyFigureRow } from "@/components/interactive/KeyFigureRow";
@@ -199,12 +200,32 @@ export function Dv1Uitvoering() {
       <ChecklistCard
         title="Concrete uitvoering"
         items={[
+          { label: "Flyer ontworpen", done: true, detail: "Met arrangementen, prijzen en QR-code voor vakantieparken" },
           { label: "Drie toeristische arrangementen uitgewerkt", done: true, detail: "Verkenner, Genieter en Verwenner — klaar voor website" },
           { label: "Conceptmail aan parkmanagers opgesteld", done: true, detail: "Voor Parc Maasresidence Thorn, EuroParcs en Boschmolenplas" },
         ]}
       />
 
-      {/* ── Uitvoering 1: De arrangementen ── */}
+      {/* ── Uitvoering 1: De flyer ── */}
+      <FadeIn>
+        <div className="my-12 border-l-4 border-seizoen pl-6">
+          <h4 className="font-heading text-2xl text-cascade-navy mb-2">De flyer voor vakantieparken</h4>
+          <p className="text-text-secondary text-sm">Ontworpen voor bij de receptie — met arrangementen, prijzen en QR-code</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div className="my-8 flex justify-center">
+          <Image
+            src="/images/flyer-vakantieparken.png"
+            alt="Flyer vakantieparken met drie arrangementen"
+            width={500}
+            height={707}
+            className="rounded-xl border border-border shadow-sm"
+          />
+        </div>
+      </FadeIn>
+
+      {/* ── Uitvoering 2: De arrangementen ── */}
       <FadeIn>
         <div className="my-12 border-l-4 border-cascade-gold pl-6">
           <h4 className="font-heading text-2xl text-cascade-navy mb-2">De drie toeristische arrangementen</h4>
