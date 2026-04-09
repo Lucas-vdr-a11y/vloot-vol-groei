@@ -23,7 +23,7 @@ export function Navbar() {
       <div className="container-wide flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo/cascade-icon.svg" alt="Cascade" width={32} height={32} />
-          <span className="font-heading text-white text-lg hidden sm:inline">De Vloot Vol Groei</span>
+          <span className="font-heading font-bold text-white text-lg hidden sm:inline">De Vloot Vol Groei</span>
         </Link>
         <div className="hidden md:flex items-center gap-1">
           {links.map((link) => {
