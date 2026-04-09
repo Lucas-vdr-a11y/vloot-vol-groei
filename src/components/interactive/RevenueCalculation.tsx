@@ -29,8 +29,8 @@ export function RevenueCalculation({ title, steps, result, description }: Revenu
         {steps.map((step, i) => (
           <motion.div
             key={step.label}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: i * 0.3, duration: 0.5 }}
             className="flex items-center gap-3"
           >
@@ -44,8 +44,8 @@ export function RevenueCalculation({ title, steps, result, description }: Revenu
           </motion.div>
         ))}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: steps.length * 0.3, duration: 0.5 }}
           className="flex items-center gap-3"
         >
