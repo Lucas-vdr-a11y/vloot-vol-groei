@@ -711,6 +711,15 @@ export function Dv3Uitvoering() {
           { icon: FileText, title: "Beschikbaarheid PDF", description: "Richtlijnen per seizoen, geen harde eisen" },
         ]}
       />
+      <FeatureShowcase
+        title="Bring a Buddy — wat we hebben gebouwd"
+        features={[
+          { icon: Globe, title: "Landingspagina", description: "Eigen pagina op werkenbijcascade.nl/bring-a-buddy met uitleg en voorwaarden" },
+          { icon: Mail, title: "HTML e-mailtemplate", description: "Responsive e-mail met dark mode support voor communicatie naar alle medewerkers" },
+          { icon: Send, title: "WhatsApp deellink", description: "Medewerkers kunnen hun persoonlijke link direct via WhatsApp delen" },
+          { icon: UserPlus, title: "Doorverwijzing tracking", description: "Sollicitatieformulier registreert automatisch wie de doorverwijzer is" },
+        ]}
+      />
       <FadeIn>
         <div className="my-12">
           <h4 className="font-heading text-xl text-cascade-navy mb-4">Video: uitleg werkenbijcascade.nl</h4>
