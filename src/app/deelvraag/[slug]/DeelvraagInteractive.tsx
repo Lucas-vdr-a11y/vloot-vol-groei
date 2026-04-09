@@ -220,14 +220,52 @@ export function Dv1HuidigeSituatie() {
 
 export function Dv1Uitvoering() {
   return (
-    <ChecklistCard
-      title="Concrete uitvoering"
-      items={[
-        { label: "Flyer ontworpen", done: true, detail: "Met arrangementen, prijzen en QR-code voor vakantieparken" },
-        { label: "Drie toeristische arrangementen uitgewerkt", done: true, detail: "Ontdek, Genieter en Verwenner — klaar voor website" },
-        { label: "Conceptmail aan parkmanagers opgesteld", done: true, detail: "Voor Parc Maasresidence Thorn, EuroParcs en Boschmolenplas" },
-      ]}
-    />
+    <>
+      <ChecklistCard
+        title="Concrete uitvoering"
+        items={[
+          { label: "Flyer ontworpen", done: true, detail: "Met arrangementen, prijzen en QR-code voor vakantieparken" },
+          { label: "Drie toeristische arrangementen uitgewerkt", done: true, detail: "Ontdek, Genieter en Verwenner — klaar voor website" },
+          { label: "Conceptmail aan parkmanagers opgesteld", done: true, detail: "Voor Parc Maasresidence Thorn, EuroParcs en Boschmolenplas" },
+        ]}
+      />
+
+      {/* ── Uitvoering 1: De flyer ── */}
+      <FadeIn>
+        <div className="my-12 border-l-4 border-cascade-gold pl-6">
+          <h4 className="font-heading text-2xl text-cascade-navy mb-2">De flyer voor vakantieparken</h4>
+          <p className="text-text-secondary text-sm">A4-flyer met de drie arrangementen, prijzen, QR-code en kortingsactie</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div className="my-8 relative w-full rounded-xl overflow-hidden border border-border shadow-sm bg-white" style={{ height: "800px" }}>
+          <iframe
+            src="/flyer-vakantieparken.html"
+            title="Flyer vakantieparken"
+            className="w-full h-full"
+            style={{ border: "none" }}
+          />
+        </div>
+      </FadeIn>
+
+      {/* ── Uitvoering 2: De conceptmail ── */}
+      <FadeIn>
+        <div className="my-12 border-l-4 border-varen pl-6">
+          <h4 className="font-heading text-2xl text-cascade-navy mb-2">Conceptmail aan parkmanagers</h4>
+          <p className="text-text-secondary text-sm">E-mail naar Parc Maasresidence Thorn, EuroParcs Limburg en Villapark Boschmolenplas met samenwerkingsvoorstel</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div className="my-8 relative w-full rounded-xl overflow-hidden border border-border shadow-sm bg-white" style={{ height: "700px" }}>
+          <iframe
+            src="/email-parkmanagers.html"
+            title="Conceptmail parkmanagers"
+            className="w-full h-full"
+            style={{ border: "none" }}
+          />
+        </div>
+      </FadeIn>
+    </>
   );
 }
 
