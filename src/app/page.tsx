@@ -1,65 +1,109 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Ship, Briefcase, Users, ArrowRight } from "lucide-react";
 
-export default function Home() {
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { Hero } from "@/components/sections/Hero";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { FadeIn } from "@/components/ui/FadeIn";
+import { Divider } from "@/components/ui/Divider";
+import { Badge } from "@/components/ui/Badge";
+import { inleiding } from "@/content/inleiding";
+
+const deelvraagCards = [
+  {
+    number: 1,
+    slug: "1",
+    icon: Ship,
+    title: "Verblijfsrecreanten bereiken",
+    question: inleiding.questions[0].question,
+  },
+  {
+    number: 2,
+    slug: "2",
+    icon: Briefcase,
+    title: "De B2B-markt bereiken",
+    question: inleiding.questions[1].question,
+  },
+  {
+    number: 3,
+    slug: "3",
+    icon: Users,
+    title: "Personeel aantrekken en behouden",
+    question: inleiding.questions[2].question,
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Navbar />
+      <ScrollProgress />
+      <main>
+        <Hero />
+
+        {/* Inleiding section */}
+        <section className="bg-warm-50 py-24">
+          <div className="container-narrow">
+            <FadeIn>
+              <Badge variant="navy">Aanleiding</Badge>
+              <h2 className="font-heading text-3xl md:text-4xl text-navy-900 mt-4 mb-10 text-balance">
+                {inleiding.title}
+              </h2>
+            </FadeIn>
+            <div className="space-y-6">
+              {inleiding.paragraphs.map((paragraph, i) => (
+                <FadeIn key={i} delay={i * 0.08}>
+                  <p className="text-navy-700 text-lg leading-relaxed">{paragraph}</p>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <Divider variant="dots" />
+
+        {/* Deelvraag cards section */}
+        <section className="bg-warm-50 pb-24">
+          <div className="container-wide">
+            <FadeIn>
+              <h2 className="font-heading text-2xl md:text-3xl text-navy-900 mb-10 text-center">
+                De drie deelvragen
+              </h2>
+            </FadeIn>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {deelvraagCards.map((card, i) => {
+                const Icon = card.icon;
+                return (
+                  <FadeIn key={card.slug} delay={i * 0.1}>
+                    <Link
+                      href={`/deelvraag/${card.slug}`}
+                      className="group flex flex-col h-full bg-white rounded-2xl border border-navy-200 shadow-sm hover:shadow-md hover:border-water-300 transition-all duration-300 p-8"
+                    >
+                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-water-100 text-water-600 mb-5 group-hover:bg-water-200 transition-colors">
+                        <Icon size={24} />
+                      </div>
+                      <span className="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-2">
+                        Deelvraag {card.number}
+                      </span>
+                      <h3 className="font-heading text-xl font-semibold text-navy-900 mb-4">
+                        {card.title}
+                      </h3>
+                      <p className="text-navy-600 text-sm leading-relaxed flex-1">
+                        {card.question}
+                      </p>
+                      <div className="mt-6 flex items-center gap-2 text-water-600 text-sm font-medium group-hover:gap-3 transition-all">
+                        Lees meer <ArrowRight size={16} />
+                      </div>
+                    </Link>
+                  </FadeIn>
+                );
+              })}
+            </div>
+          </div>
+        </section>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
