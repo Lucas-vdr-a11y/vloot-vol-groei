@@ -673,11 +673,18 @@ export function Dv3Uitvoering() {
         ]}
       />
       <CTABanner
-        title="Bekijk de vacaturewebsite"
-        description="Als onderdeel van dit profielwerkstuk hebben wij werkenbijcascade.nl gebouwd — een volledige vacaturewebsite met sollicitatieformulier, loontabellen en admin dashboard."
+        title="Bekijk de publieke vacaturewebsite"
+        description="Op werkenbijcascade.nl kunnen sollicitanten alle vacatures bekijken, informatie lezen over werken bij Cascade, loontabellen inzien en direct solliciteren via het online formulier."
         buttonText="Bezoek werkenbijcascade.nl"
         href="https://werkenbijcascade.nl"
         variant="gold"
+      />
+      <CTABanner
+        title="Bekijk het admin dashboard"
+        description="Achter de schermen beschikt de website over een volledig beheerpaneel. Hiermee kunnen sollicitaties worden ingezien, vacatures worden aangemaakt en bewerkt, loontabellen worden bijgewerkt en paginateksten worden aangepast via het ingebouwde CMS. Log in met het viewer-account om het dashboard te bekijken."
+        buttonText="Open het dashboard"
+        href="https://werkenbijcascade.nl/login"
+        variant="navy"
       />
     </>
   );
