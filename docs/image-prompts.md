@@ -117,6 +117,56 @@ Design a simple decorative wave divider in SVG style for Rederij Cascade. A sing
 
 ---
 
+## 7. Flyer voor vakantieparken
+
+**Bestandsnaam:** `flyer-vakantieparken.pdf`
+**Formaat:** A4 (210x297mm), verticaal, printklaar
+**Type:** Grafisch design / print-ready flyer
+
+**Referenties:**
+- Upload `CAS - links.png` (logo met icoon links) als referentie
+- Upload pagina 2 van `huisstijlkaart.pdf` (kleurenpalet) als referentie
+- Upload `CAS - vol verassingen.png` (logo met tagline + golflijn) als referentie
+
+**Prompt:**
+Design a premium A4 print flyer for Rederij Cascade, a Dutch river cruise company. This flyer will be placed at the reception desks of holiday parks to attract tourists.
+
+**Brand identity:**
+- Logo: Golden ship wheel with anchor icon + "Cascade" text in navy blue. Use the uploaded logo as reference.
+- Primary color: deep navy blue (#092D61)
+- Gold accent: #B49253 (used for highlights, prices, decorative elements)
+- Background: warm off-white (#F9F7F5)
+- Secondary backgrounds: light grey (#EDECEA)
+- Font style: rounded, friendly headings (similar to Baloo Thambi 2) + clean sans-serif body text (similar to Poppins)
+
+**Layout (top to bottom):**
+
+1. **Header (top 20%):** Navy blue (#092D61) background. Cascade logo (golden wheel icon + "Cascade" text) centered. Below the logo: tagline "De vloot vol verrassingen" in gold (#B49253). Below that: "Rondvaarten & arrangementen vanuit Maasbracht en Thorn" in white/light text. A decorative wave transition at the bottom edge of the header, transitioning from navy to the warm white body.
+
+2. **Intro text (small section):** Centered. Heading: "Ontdek de Maas vanuit een ander perspectief" in navy. Short subtitle: "Combineer een rondvaart met heerlijk eten en drinken" in medium grey (#49648A).
+
+3. **Three arrangement cards (main body, ~50%):** Three horizontal card-style sections stacked vertically, each with:
+   - A small circular icon on the left (coffee cup for Ontdek in green circle #DBE4DA, plate/food for Genieter in blue circle #DAE0E8, teacup for Verwenner in gold circle #E8E1D6)
+   - Name in large navy text: "Het Ontdek-arrangement", "Het Genieter-arrangement", "Het Verwenner-arrangement"
+   - Short description in grey text
+   - Small pill-shaped tags showing what's included (e.g., "Rondvaart", "Koffie & gebak")
+   - Price in large gold (#B49253) text on the right: "€27,50", "€45,00", "€52,50"
+   - The middle card (Genieter) should have a subtle gold border and a small "Populair" badge in gold (#B49253) at the top right corner
+
+4. **QR code section (bottom 20%):** Light grey (#F9F7F5) background. Heading: "Direct boeken?" in navy. A prominent QR code placeholder in the center (square with rounded corners). Below the QR: "rederijcascade.nl" in navy bold. A gold (#B49253) pill-shaped badge below that reads "Toon uw accommodatiebewijs voor 10% korting!"
+
+5. **Footer strip:** Navy (#092D61) background. Left side: "Rederij Cascade" in white, address "Cruise Terminal Maasbracht • Steiger Thorn", phone + email in light text. Right side: "varenbijcascade.com" in gold.
+
+**Style notes:**
+- Clean, modern, premium feel — NOT cheap or busy
+- Plenty of white space between sections
+- Decorative wave elements (subtle, in gold at low opacity) between sections
+- The overall impression should be: quality, relaxation, nature, culinary enjoyment
+- The flyer should make a tourist at a holiday park reception think "this looks like a great afternoon activity"
+- Print-ready quality, no bleed issues
+
+---
+
 ## Instructies voor Nano Banana
 
 1. **Voeg bij ELKE generatie het logo (`CAS - links.png`) en de kleurenkaart (pagina 2 van `huisstijlkaart.pdf`) toe als referentie-uploads** zodat de AI de huisstijl kent

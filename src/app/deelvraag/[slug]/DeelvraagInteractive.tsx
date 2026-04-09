@@ -158,6 +158,7 @@ export function Dv1Plan() {
             description:
               "Een rondvaart in combinatie met koffie en gebak. Geschikt voor een ochtend of middag.",
             includes: ["Rondvaart", "Koffie & gebak", "Laagdrempelig instapmodel"],
+            image: "/images/arrangement-ontdek.png",
           },
           {
             name: "Het Genieter-arrangement",
@@ -165,6 +166,7 @@ export function Dv1Plan() {
             description:
               "Een rondvaart met een uitgebreide brunch of lunch, gericht op gezinnen en stellen.",
             includes: ["Rondvaart", "Uitgebreide brunch of lunch", "Halve dag programma"],
+            image: "/images/arrangement-genieter.png",
           },
           {
             name: "Het Verwenner-arrangement",
@@ -172,6 +174,7 @@ export function Dv1Plan() {
             description:
               "Een rondvaart met high tea, het premium arrangement voor speciale momenten.",
             includes: ["Rondvaart", "High tea", "Premium beleving op het water"],
+            image: "/images/arrangement-verwenner.png",
           },
         ]}
       />
