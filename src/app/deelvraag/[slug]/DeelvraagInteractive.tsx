@@ -608,44 +608,6 @@ export function Dv3Plan() {
   );
 }
 
-export function Dv3BringABuddy() {
-  return (
-    <>
-      <ProcessTimeline
-        title="Bring a Buddy — bonusstructuur"
-        steps={[
-          {
-            title: "€25 — Contract getekend + proefdag geslaagd",
-            description: "De buddy heeft het contract ondertekend en is geslaagd voor de proefdag. De eerste bonus wordt direct uitbetaald aan de doorverwijzer.",
-          },
-          {
-            title: "€25 — 8 diensten in eerste 2 maanden",
-            description: "De buddy heeft minimaal 8 diensten gedraaid in de eerste twee maanden. Dit toont aan dat de buddy serieus en betrouwbaar is.",
-          },
-          {
-            title: "€50 — 6 maanden in dienst + beschikbaarheid",
-            description: "De buddy is na zes maanden nog in dienst en voldoet aan de beschikbaarheidseisen. De laatste en grootste bonus wordt uitbetaald.",
-          },
-        ]}
-      />
-      <KeyFigureRow
-        figures={[
-          { value: 100, prefix: "€", format: "number", label: "Per buddy", description: "€25 + €25 + €50 in drie stappen" },
-          { value: 5, format: "number", label: "Max buddy's", description: "Per medewerker maximaal 5 doorverwijzingen" },
-          { value: 500, prefix: "€", format: "number", label: "Max bonus", description: "Totaal te verdienen per medewerker" },
-        ]}
-      />
-      <CTABanner
-        title="Bekijk de Bring a Buddy landingspagina"
-        description="Het programma heeft een eigen landingspagina op werkenbijcascade.nl met uitleg, voorwaarden en deelmogelijkheden via WhatsApp en een persoonlijke link."
-        buttonText="Bekijk de landingspagina"
-        href="https://werkenbijcascade.nl/bring-a-buddy"
-        variant="green"
-      />
-    </>
-  );
-}
-
 export function Dv3Probleem() {
   return (
     <PersonaCards
@@ -697,8 +659,16 @@ export function Dv3HuidigeSituatie() {
 export function Dv3Uitvoering() {
   return (
     <>
+      {/* ── Uitvoering 1: De vacaturewebsite ── */}
+      <FadeIn>
+        <div className="my-12 border-l-4 border-cascade-gold pl-6">
+          <h4 className="font-heading text-2xl text-cascade-navy mb-2">Uitvoering 1: Vacaturewebsite</h4>
+          <p className="text-text-secondary text-sm">werkenbijcascade.nl — volledig zelf gebouwd</p>
+        </div>
+      </FadeIn>
+
       <FeatureShowcase
-        title="Wat werkenbijcascade.nl biedt"
+        title="Publieke pagina's"
         features={[
           { icon: List, title: "Vacaturelijst", description: "Alle functies per categorie: bediening/bar, keuken, afwas, kapitein, matroos" },
           { icon: FormInput, title: "Sollicitatieformulier", description: "Gegevens, functievoorkeur, ervaring, talen en beschikbaarheid" },
@@ -706,20 +676,18 @@ export function Dv3Uitvoering() {
           { icon: GraduationCap, title: "BBL-opleidingen", description: "Speciaal voor horeca-studenten die een leerplek zoeken" },
           { icon: DollarSign, title: "Loontabellen", description: "Per leeftijd en functie — transparant wat je verdient" },
           { icon: Users2, title: "Over Ons", description: "De sfeer en het team van Rederij Cascade" },
-          { icon: LayoutDashboard, title: "Admin Dashboard", description: "Sollicitaties beheren, vacatures bewerken, CMS" },
-          { icon: Settings, title: "CMS", description: "Paginateksten en loontabellen zelf aanpassen" },
-          { icon: FileText, title: "Beschikbaarheid PDF", description: "Richtlijnen per seizoen, geen harde eisen" },
         ]}
       />
+
       <FeatureShowcase
-        title="Bring a Buddy — wat we hebben gebouwd"
+        title="Admin dashboard"
         features={[
-          { icon: Globe, title: "Landingspagina", description: "Eigen pagina op werkenbijcascade.nl/bring-a-buddy met uitleg en voorwaarden" },
-          { icon: Mail, title: "HTML e-mailtemplate", description: "Responsive e-mail met dark mode support voor communicatie naar alle medewerkers" },
-          { icon: Send, title: "WhatsApp deellink", description: "Medewerkers kunnen hun persoonlijke link direct via WhatsApp delen" },
-          { icon: UserPlus, title: "Doorverwijzing tracking", description: "Sollicitatieformulier registreert automatisch wie de doorverwijzer is" },
+          { icon: LayoutDashboard, title: "Sollicitatiebeheer", description: "Binnengekomen sollicitaties inzien, beheren en opvolgen" },
+          { icon: Settings, title: "Vacature-editor", description: "Vacatures aanmaken, bewerken en aan/uit zetten" },
+          { icon: FileText, title: "CMS", description: "Paginateksten, loontabellen en beschikbaarheidsrichtlijnen aanpassen" },
         ]}
       />
+
       <FadeIn>
         <div className="my-12">
           <h4 className="font-heading text-xl text-cascade-navy mb-4">Video: uitleg werkenbijcascade.nl</h4>
@@ -734,12 +702,80 @@ export function Dv3Uitvoering() {
           </div>
         </div>
       </FadeIn>
+
       <CTABanner
-        title="Bekijk de publieke vacaturewebsite"
-        description="Op werkenbijcascade.nl kunnen sollicitanten alle vacatures bekijken, informatie lezen over werken bij Cascade, loontabellen inzien en direct solliciteren via het online formulier."
+        title="Bekijk de vacaturewebsite"
+        description="Op werkenbijcascade.nl vindt u alle vacatures, het sollicitatieformulier, de loontabellen en de informatiepagina's."
         buttonText="Bezoek werkenbijcascade.nl"
         href="https://werkenbijcascade.nl"
         variant="gold"
+      />
+
+      {/* ── Uitvoering 2: Bring a Buddy ── */}
+      <FadeIn>
+        <div className="my-12 border-l-4 border-varen pl-6">
+          <h4 className="font-heading text-2xl text-cascade-navy mb-2">Uitvoering 2: Bring a Buddy programma</h4>
+          <p className="text-text-secondary text-sm">Doorverwijzingsprogramma met landingspagina, e-mail en tracking</p>
+        </div>
+      </FadeIn>
+
+      <ProcessTimeline
+        title="Bonusstructuur"
+        steps={[
+          {
+            title: "€25 — Contract getekend + proefdag geslaagd",
+            description: "De buddy heeft het contract ondertekend en is geslaagd voor de proefdag.",
+          },
+          {
+            title: "€25 — 8 diensten in eerste 2 maanden",
+            description: "De buddy heeft minimaal 8 diensten gedraaid in de eerste twee maanden.",
+          },
+          {
+            title: "€50 — 6 maanden in dienst + beschikbaarheid",
+            description: "De buddy is na zes maanden nog in dienst en voldoet aan de beschikbaarheidseisen.",
+          },
+        ]}
+      />
+
+      <KeyFigureRow
+        figures={[
+          { value: 100, prefix: "€", format: "number", label: "Per buddy", description: "€25 + €25 + €50 in drie stappen" },
+          { value: 5, format: "number", label: "Max buddy's", description: "Per medewerker maximaal 5" },
+          { value: 500, prefix: "€", format: "number", label: "Max bonus", description: "Totaal te verdienen per medewerker" },
+        ]}
+      />
+
+      <FeatureShowcase
+        title="Wat we hebben gebouwd"
+        features={[
+          { icon: Globe, title: "Landingspagina", description: "werkenbijcascade.nl/bring-a-buddy met uitleg, voorwaarden en deelmogelijkheden" },
+          { icon: Mail, title: "HTML e-mailtemplate", description: "Responsive e-mail met dark mode support voor communicatie naar alle medewerkers" },
+          { icon: Send, title: "WhatsApp deellink", description: "Persoonlijke link direct delen via WhatsApp" },
+          { icon: UserPlus, title: "Doorverwijzing tracking", description: "Sollicitatieformulier registreert automatisch de doorverwijzer" },
+        ]}
+      />
+
+      <FadeIn>
+        <div className="my-12">
+          <h4 className="font-heading text-xl text-cascade-navy mb-4">De HTML e-mail die we hebben ontworpen</h4>
+          <p className="text-text-secondary text-sm mb-4">Deze responsive e-mail met dark mode support wordt naar alle medewerkers gestuurd om het Bring a Buddy programma te introduceren.</p>
+          <div className="relative w-full rounded-xl overflow-hidden border border-border shadow-sm bg-white" style={{ height: "600px" }}>
+            <iframe
+              src="/bring-a-buddy-email.html"
+              title="Bring a Buddy e-mailtemplate"
+              className="w-full h-full"
+              style={{ border: "none" }}
+            />
+          </div>
+        </div>
+      </FadeIn>
+
+      <CTABanner
+        title="Bekijk de Bring a Buddy landingspagina"
+        description="Het programma heeft een eigen pagina met uitleg, voorwaarden en deelmogelijkheden via WhatsApp en een persoonlijke link."
+        buttonText="Bekijk de landingspagina"
+        href="https://werkenbijcascade.nl/bring-a-buddy"
+        variant="green"
       />
     </>
   );
