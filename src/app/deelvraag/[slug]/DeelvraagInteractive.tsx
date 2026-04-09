@@ -17,6 +17,7 @@ import { SeasonalChart } from "@/components/interactive/SeasonalChart";
 import { PersonaCards } from "@/components/interactive/PersonaCards";
 import { CTABanner } from "@/components/interactive/CTABanner";
 import { FeatureShowcase } from "@/components/interactive/FeatureShowcase";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 // ─── Deelvraag 1 ────────────────────────────────────────────────────────────
 
@@ -672,6 +673,20 @@ export function Dv3Uitvoering() {
           { icon: FileText, title: "Beschikbaarheid PDF", description: "Richtlijnen per seizoen, geen harde eisen" },
         ]}
       />
+      <FadeIn>
+        <div className="my-12">
+          <h4 className="font-heading text-xl text-cascade-navy mb-4">Video: uitleg werkenbijcascade.nl</h4>
+          <div className="relative w-full rounded-xl overflow-hidden border border-border shadow-sm" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              src="https://www.youtube.com/embed/ppn2YueK2ww"
+              title="Uitleg werkenbijcascade.nl"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </div>
+      </FadeIn>
       <CTABanner
         title="Bekijk de publieke vacaturewebsite"
         description="Op werkenbijcascade.nl kunnen sollicitanten alle vacatures bekijken, informatie lezen over werken bij Cascade, loontabellen inzien en direct solliciteren via het online formulier."
