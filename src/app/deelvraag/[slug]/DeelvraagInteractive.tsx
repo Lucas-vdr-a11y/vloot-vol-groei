@@ -150,34 +150,6 @@ export function Dv1Plan() {
           },
         ]}
       />
-      <ArrangementCards
-        arrangements={[
-          {
-            name: "Het Verkenner-arrangement",
-            tier: "basis",
-            description:
-              "Maasparel Tocht met Limburgse vlaai inclusief koffie of thee. Geschikt voor een ochtend of middag.",
-            includes: ["Maasparel Tocht", "Limburgse vlaai", "Koffie of thee"],
-            image: "/images/arrangement-ontdek.png",
-          },
-          {
-            name: "Het Genieter-arrangement",
-            tier: "midden",
-            description:
-              "Maasparel Tocht met lunchdeal, gericht op gezinnen en stellen.",
-            includes: ["Maasparel Tocht", "Uitgebreide lunchdeal"],
-            image: "/images/arrangement-genieter.png",
-          },
-          {
-            name: "Het Verwenner-arrangement",
-            tier: "premium",
-            description:
-              "High Tea op het water, het premium arrangement voor speciale momenten.",
-            includes: ["Rondvaart", "Volledige High Tea"],
-            image: "/images/arrangement-verwenner.png",
-          },
-        ]}
-      />
     </>
   );
 }
@@ -227,29 +199,46 @@ export function Dv1Uitvoering() {
       <ChecklistCard
         title="Concrete uitvoering"
         items={[
-          { label: "Flyer ontworpen", done: true, detail: "Met arrangementen, prijzen en QR-code voor vakantieparken" },
-          { label: "Drie toeristische arrangementen uitgewerkt", done: true, detail: "Ontdek, Genieter en Verwenner — klaar voor website" },
+          { label: "Drie toeristische arrangementen uitgewerkt", done: true, detail: "Verkenner, Genieter en Verwenner — klaar voor website" },
           { label: "Conceptmail aan parkmanagers opgesteld", done: true, detail: "Voor Parc Maasresidence Thorn, EuroParcs en Boschmolenplas" },
         ]}
       />
 
-      {/* ── Uitvoering 1: De flyer ── */}
+      {/* ── Uitvoering 1: De arrangementen ── */}
       <FadeIn>
         <div className="my-12 border-l-4 border-cascade-gold pl-6">
-          <h4 className="font-heading text-2xl text-cascade-navy mb-2">De flyer voor vakantieparken</h4>
-          <p className="text-text-secondary text-sm">A4-flyer met de drie arrangementen, prijzen, QR-code en kortingsactie</p>
+          <h4 className="font-heading text-2xl text-cascade-navy mb-2">De drie toeristische arrangementen</h4>
+          <p className="text-text-secondary text-sm">Uitgewerkt met naam, omschrijving en inhoud — klaar om in te zetten</p>
         </div>
       </FadeIn>
-      <FadeIn>
-        <div className="my-8 relative w-full rounded-xl overflow-hidden border border-border shadow-sm bg-white" style={{ height: "800px" }}>
-          <iframe
-            src="/flyer-vakantieparken.html"
-            title="Flyer vakantieparken"
-            className="w-full h-full"
-            style={{ border: "none" }}
-          />
-        </div>
-      </FadeIn>
+      <ArrangementCards
+        arrangements={[
+          {
+            name: "Het Verkenner-arrangement",
+            tier: "basis",
+            description:
+              "Maasparel Tocht met Limburgse vlaai inclusief koffie of thee. Geschikt voor een ochtend of middag.",
+            includes: ["Maasparel Tocht", "Limburgse vlaai", "Koffie of thee"],
+            image: "/images/arrangement-ontdek.png",
+          },
+          {
+            name: "Het Genieter-arrangement",
+            tier: "midden",
+            description:
+              "Maasparel Tocht met lunchdeal, gericht op gezinnen en stellen.",
+            includes: ["Maasparel Tocht", "Uitgebreide lunchdeal"],
+            image: "/images/arrangement-genieter.png",
+          },
+          {
+            name: "Het Verwenner-arrangement",
+            tier: "premium",
+            description:
+              "High Tea op het water, het premium arrangement voor speciale momenten.",
+            includes: ["Rondvaart", "Volledige High Tea"],
+            image: "/images/arrangement-verwenner.png",
+          },
+        ]}
+      />
 
       {/* ── Uitvoering 2: De conceptmail ── */}
       <FadeIn>
