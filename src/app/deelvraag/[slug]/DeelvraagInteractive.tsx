@@ -1,6 +1,6 @@
 "use client";
 
-import { Handshake, Eye, Globe, Focus, HeartHandshake, Sparkles } from "lucide-react";
+import { Handshake, Eye, Globe, Focus, HeartHandshake, Sparkles, Briefcase, UserCheck, Building2, User, UserCog, Clock, GraduationCap, Heart, List, BookOpen, DollarSign, Users2, Settings, FileText, LayoutDashboard, FormInput } from "lucide-react";
 
 import { KeyFigureRow } from "@/components/interactive/KeyFigureRow";
 import { RevenueCalculation } from "@/components/interactive/RevenueCalculation";
@@ -10,6 +10,13 @@ import { MarketSegments } from "@/components/interactive/MarketSegments";
 import { ArrangementCards } from "@/components/interactive/ArrangementCards";
 import { ProcessTimeline } from "@/components/interactive/ProcessTimeline";
 import { PullQuote } from "@/components/sections/PullQuote";
+import { PlatformGrid } from "@/components/interactive/PlatformGrid";
+import { ChecklistCard } from "@/components/interactive/ChecklistCard";
+import { StrengthWeakness } from "@/components/interactive/StrengthWeakness";
+import { SeasonalChart } from "@/components/interactive/SeasonalChart";
+import { PersonaCards } from "@/components/interactive/PersonaCards";
+import { CTABanner } from "@/components/interactive/CTABanner";
+import { FeatureShowcase } from "@/components/interactive/FeatureShowcase";
 
 // ─── Deelvraag 1 ────────────────────────────────────────────────────────────
 
@@ -168,6 +175,58 @@ export function Dv1Plan() {
         ]}
       />
     </>
+  );
+}
+
+export function Dv1HuidigeSituatie() {
+  return (
+    <>
+      <PlatformGrid
+        title="Online aanwezigheid Rederij Cascade"
+        platforms={[
+          { name: "Google Maps", status: "actief", detail: "Vermelding met reviews" },
+          { name: "TripAdvisor", status: "actief", detail: "25 reviews, 4,3/5 sterren" },
+          { name: "VVV Hart van Limburg", status: "actief", detail: "Volledig profiel met foto's" },
+          { name: "DagjeWeg.nl", status: "actief" },
+          { name: "Tripper.nl", status: "actief" },
+          { name: "DagjeWegTickets.nl", status: "actief" },
+          { name: "UitTipsLimburg.nl", status: "actief" },
+          { name: "Groeps-Idee.be", status: "actief", detail: "Belgisch platform" },
+          { name: "Trip.com", status: "actief", detail: "Internationaal" },
+          { name: "Vakantieparken", status: "ontbreekt", detail: "Geen flyers of samenwerking" },
+          { name: "Google Ads", status: "ontbreekt", detail: "Geen gerichte campagnes" },
+          { name: "Social media ads", status: "ontbreekt", detail: "Geen campagnes voor toeristen" },
+        ]}
+      />
+      <StrengthWeakness
+        title="Sterkte-zwakte analyse online aanwezigheid"
+        strengths={[
+          "Professionele website met arrangementen in NL en EN",
+          "Aanwezig op 9+ toeristenplatforms",
+          "Positieve reviews (4,3/5 op TripAdvisor)",
+          "Breed aanbod: High Tea, Captain's Brunch, dinnercruises",
+        ]}
+        weaknesses={[
+          "Geen structurele samenwerkingen met vakantieparken",
+          "Geen flyers bij recepties of op informatieschermen",
+          "Geen gerichte online advertenties (Google Ads, social media)",
+          "Verblijfsrecreanten worden niet als specifieke doelgroep benaderd",
+        ]}
+      />
+    </>
+  );
+}
+
+export function Dv1Uitvoering() {
+  return (
+    <ChecklistCard
+      title="Concrete uitvoering"
+      items={[
+        { label: "Flyer ontworpen", done: true, detail: "Met arrangementen, prijzen en QR-code voor vakantieparken" },
+        { label: "Drie toeristische arrangementen uitgewerkt", done: true, detail: "Ontdek, Genieter en Verwenner — klaar voor website" },
+        { label: "Conceptmail aan parkmanagers opgesteld", done: true, detail: "Voor Parc Maasresidence Thorn, EuroParcs en Boschmolenplas" },
+      ]}
+    />
   );
 }
 
@@ -361,6 +420,104 @@ export function Dv2Positionering() {
   );
 }
 
+export function Dv2Probleem() {
+  return (
+    <>
+      <SeasonalChart
+        title="Omzetverdeling over het jaar"
+        bars={[
+          { label: "Q1", sublabel: "Jan-Mrt", percentage: 10, color: "#DAE0E8" },
+          { label: "Q2", sublabel: "Apr-Jun", percentage: 55, color: "#49648A" },
+          { label: "Q3", sublabel: "Jul-Sep", percentage: 100, color: "#092D61" },
+          { label: "Q4", sublabel: "Okt-Dec", percentage: 45, color: "#49648A" },
+        ]}
+        description="Na de kerstperiode vallen de inkomsten nagenoeg stil terwijl vaste lasten doorlopen. De B2B-markt kan deze winterdip opvullen."
+      />
+      <ComparisonCards
+        title="Waarom B2B een goede aanvulling is"
+        items={[
+          {
+            name: "B2C (huidige focus)",
+            description: "Toeristen en recreanten — het huidige kernpubliek.",
+            strengths: ["Hoog volume in het zomer", "Bekende doelgroep"],
+            weaknesses: ["Alleen weekenden en vakanties", "Eenmalig bezoek", "Lager budget per persoon"],
+          },
+          {
+            name: "B2B (groeikans)",
+            description: "Bedrijven en organisaties — de nieuwe doelgroep.",
+            highlight: true,
+            strengths: ["Doordeweeks en buiten hoogseizoen", "Hoger budget per persoon", "Herhaalbezoek bij tevredenheid", "Catering en extra services"],
+          },
+        ]}
+      />
+    </>
+  );
+}
+
+export function Dv2Situatie() {
+  return (
+    <StrengthWeakness
+      title="Beoordeling huidige uitgangspositie"
+      strengths={[
+        "Infrastructuur aanwezig: boten, vergunningen, personeel",
+        "Audiovisuele apparatuur aan boord (schermen + geluidsinstallatie)",
+        "Zomer succesvol genoeg om de winter door te komen",
+        "Overcapaciteit in de winter: geen concurrentie met ticketverkoop",
+      ]}
+      weaknesses={[
+        "Geen gerichte strategie voor de zakelijke markt",
+        "Te weinig netwerken richting event managers en HR-afdelingen",
+        "Nadruk te veel op toeristische attractie in marketing",
+      ]}
+    />
+  );
+}
+
+export function Dv2Doelgroep() {
+  return (
+    <PersonaCards
+      title="Wie boekt een zakelijke locatie?"
+      personas={[
+        {
+          icon: UserCheck,
+          title: "Secretaresses & assistenten",
+          description: "Zoeken snel en praktisch via Google.",
+          behavior: "Minder behoefte aan het verhaal, wil snelle zekerheid.",
+          needs: ["Duidelijke informatie", "Snelle offerte", "Transparante prijzen"],
+        },
+        {
+          icon: Briefcase,
+          title: "Corporate event managers",
+          description: "Vertrouwen op eigen ervaring, nemen tijd voor vergelijking.",
+          behavior: "Bezoeken locaties persoonlijk, zoeken het verhaal.",
+          needs: ["Cases en referenties", "Beoordelingen", "Duidelijke propositie"],
+        },
+        {
+          icon: Building2,
+          title: "Evenementenbureaus",
+          description: "Meest grondig, starten vroeg met zoeken.",
+          behavior: "Moeten de locatie 'verkopen' aan hun klanten.",
+          needs: ["Pitch-materiaal en foto's", "Unieke kenmerken", "Transparantie"],
+        },
+        {
+          icon: User,
+          title: "ZZP'ers",
+          description: "Zelfstandige organisatoren, gebruiken vaker Facebook.",
+          behavior: "Aparte groep met eigen zoekkanalen.",
+          needs: ["Laagdrempelig contact", "Flexibele mogelijkheden"],
+        },
+        {
+          icon: UserCog,
+          title: "Overige medewerkers",
+          description: "Eigenaren, HR-medewerkers die incidenteel boeken.",
+          behavior: "Minder ervaring met locatie zoeken.",
+          needs: ["Overzichtelijk aanbod", "Persoonlijk contact"],
+        },
+      ]}
+    />
+  );
+}
+
 // ─── Deelvraag 3 ────────────────────────────────────────────────────────────
 
 export function Dv3Concurrentie() {
@@ -447,5 +604,81 @@ export function Dv3Plan() {
         },
       ]}
     />
+  );
+}
+
+export function Dv3Probleem() {
+  return (
+    <PersonaCards
+      title="Drie doelgroepen voor werving"
+      personas={[
+        {
+          icon: Clock,
+          title: "Jongeren",
+          description: "Vrij in weekenden en vakanties — precies de piekmomenten.",
+          behavior: "Zoeken een bijbaan, flexibiliteit is belangrijk.",
+          needs: ["Duidelijk uurloon", "Flexibele beschikbaarheid", "Laagdrempelig solliciteren"],
+        },
+        {
+          icon: Heart,
+          title: "Gepensioneerden",
+          description: "Vaste lasten gedekt door pensioen, werken voor plezier.",
+          behavior: "Open voor oproepcontract, willen geen vaste eisen.",
+          needs: ["Geen vaste verplichtingen", "Gezelligheid", "Eigen tempo"],
+        },
+        {
+          icon: GraduationCap,
+          title: "BBL-studenten",
+          description: "Horeca-studenten met meer kennis en ervaring.",
+          behavior: "Zoeken een leerplek, nemen genoegen met lager loon.",
+          needs: ["Leermogelijkheden", "Combinatie met school", "Praktijkervaring"],
+        },
+      ]}
+    />
+  );
+}
+
+export function Dv3HuidigeSituatie() {
+  return (
+    <ChecklistCard
+      title="Audit huidige vacaturepagina"
+      items={[
+        { label: "Uurloon vermeld per leeftijd", done: false, detail: "Jongeren vinden dit belangrijk — ontbreekt nu" },
+        { label: "Laagdrempelig sollicitatieformulier", done: false, detail: "Alleen e-mail is hoge drempel voor jongeren" },
+        { label: "Alle functies duidelijk vermeld", done: false, detail: "Kapitein, afwasser, keuken en entertainment ontbreken" },
+        { label: "Type dienstverband aangegeven", done: false, detail: "Bijbaan vs. vast onduidelijk — mensen haken af" },
+        { label: "Logische categorieën", done: false, detail: "Huidige verdeling (doordeweeks/weekend) is onlogisch" },
+        { label: "Social media werving", done: false, detail: "Informeler kanaal dat jongeren bereikt" },
+        { label: "Doorverwijzing door collega's", done: false, detail: "Niet actief gepromoot" },
+      ]}
+    />
+  );
+}
+
+export function Dv3Uitvoering() {
+  return (
+    <>
+      <FeatureShowcase
+        title="Wat werkenbijcascade.nl biedt"
+        features={[
+          { icon: List, title: "Vacaturelijst", description: "Alle functies per categorie: bediening/bar, keuken, afwas, kapitein, matroos" },
+          { icon: FormInput, title: "Sollicitatieformulier", description: "Gegevens, functievoorkeur, ervaring, talen en beschikbaarheid" },
+          { icon: BookOpen, title: "Jouw Bijbaan", description: "Informatie over werken bij Cascade, sfeer en het team" },
+          { icon: GraduationCap, title: "BBL-opleidingen", description: "Speciaal voor horeca-studenten die een leerplek zoeken" },
+          { icon: DollarSign, title: "Loontabellen", description: "Per leeftijd en functie — transparant wat je verdient" },
+          { icon: Users2, title: "Over Ons", description: "De sfeer en het team van Rederij Cascade" },
+          { icon: LayoutDashboard, title: "Admin Dashboard", description: "Sollicitaties beheren, vacatures bewerken, CMS" },
+          { icon: Settings, title: "CMS", description: "Paginateksten en loontabellen zelf aanpassen" },
+          { icon: FileText, title: "Beschikbaarheid PDF", description: "Richtlijnen per seizoen, geen harde eisen" },
+        ]}
+      />
+      <CTABanner
+        title="Bekijk de vacaturewebsite"
+        description="Als onderdeel van dit profielwerkstuk hebben wij werkenbijcascade.nl gebouwd — een volledige vacaturewebsite met sollicitatieformulier, loontabellen en admin dashboard."
+        buttonText="Bezoek werkenbijcascade.nl"
+        href="https://werkenbijcascade.nl"
+        variant="gold"
+      />
+    </>
   );
 }
