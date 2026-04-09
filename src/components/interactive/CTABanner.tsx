@@ -27,7 +27,7 @@ export function CTABanner({ title, description, buttonText, href, variant = "nav
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-cta text-cascade-navy font-semibold rounded-lg hover:bg-cta/80 transition-colors text-sm card-hover"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-cascade-gold text-white font-semibold rounded-lg hover:bg-cascade-gold/80 transition-colors text-sm card-hover"
         >
           {buttonText}
           <ArrowUpRight size={18} />
