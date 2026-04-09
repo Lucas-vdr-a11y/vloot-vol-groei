@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   title: "De Vloot Vol Groei — Profielwerkstuk",
   description:
     "Onderzoek naar doelgroepbereik en merkversterking bij Rederij Cascade. Door Daan Bocken & Lucas van de Runstraat.",
+  manifest: "/manifest.json",
+  themeColor: "#092D61",
 };
 
 export default function RootLayout({
