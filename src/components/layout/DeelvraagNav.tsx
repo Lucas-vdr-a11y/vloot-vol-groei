@@ -15,26 +15,26 @@ export function DeelvraagNav({ currentSlug }: { currentSlug: string }) {
   return (
     <div className="container-wide py-12 flex justify-between gap-4">
       {prev ? (
-        <Link href={`/deelvraag/${prev.slug}`} className="flex items-center gap-2 text-navy-500 hover:text-water-600 transition-colors">
+        <Link href={`/deelvraag/${prev.slug}`} className="flex items-center gap-2 text-text-secondary hover:text-cascade-gold transition-colors">
           <ArrowLeft size={18} />
           <div className="text-left">
-            <div className="text-xs text-navy-400">Vorige</div>
+            <div className="text-xs text-text-muted">Vorige</div>
             <div className="text-sm font-medium">{prev.title}</div>
           </div>
         </Link>
       ) : <div />}
       {next ? (
-        <Link href={`/deelvraag/${next.slug}`} className="flex items-center gap-2 text-navy-500 hover:text-water-600 transition-colors text-right">
+        <Link href={`/deelvraag/${next.slug}`} className="flex items-center gap-2 text-text-secondary hover:text-cascade-gold transition-colors text-right">
           <div>
-            <div className="text-xs text-navy-400">Volgende</div>
+            <div className="text-xs text-text-muted">Volgende</div>
             <div className="text-sm font-medium">{next.title}</div>
           </div>
           <ArrowRight size={18} />
         </Link>
       ) : (
-        <Link href="/" className="flex items-center gap-2 text-navy-500 hover:text-water-600 transition-colors">
+        <Link href="/" className="flex items-center gap-2 text-text-secondary hover:text-cascade-gold transition-colors">
           <div className="text-right">
-            <div className="text-xs text-navy-400">Terug naar</div>
+            <div className="text-xs text-text-muted">Terug naar</div>
             <div className="text-sm font-medium">Overzicht</div>
           </div>
           <ArrowRight size={18} />

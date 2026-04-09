@@ -8,7 +8,7 @@ interface TextBlockProps {
 export function TextBlock({ children, className = "" }: TextBlockProps) {
   return (
     <FadeIn>
-      <div className={`max-w-none text-navy-700 text-lg leading-relaxed ${className}`}>
+      <div className={`max-w-none text-text-secondary text-lg leading-relaxed ${className}`}>
         {children}
       </div>
     </FadeIn>

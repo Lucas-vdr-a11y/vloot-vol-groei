@@ -10,9 +10,9 @@ interface Arrangement {
 }
 
 const tierStyles = {
-  basis: { border: "border-navy-200", badge: "bg-navy-100 text-navy-600", icon: "text-navy-400" },
-  midden: { border: "border-water-300", badge: "bg-water-100 text-water-600", icon: "text-water-500" },
-  premium: { border: "border-gold-400", badge: "bg-gold-300/20 text-gold-600", icon: "text-gold-500" },
+  basis: { border: "border-varen", badge: "bg-varen-bg text-varen", icon: "text-varen" },
+  midden: { border: "border-events-mid", badge: "bg-events-bg text-events", icon: "text-events" },
+  premium: { border: "border-cascade-gold", badge: "bg-groep-bg text-groep", icon: "text-cascade-gold" },
 };
 
 export function ArrangementCards({ arrangements }: { arrangements: Arrangement[] }) {
@@ -26,11 +26,11 @@ export function ArrangementCards({ arrangements }: { arrangements: Arrangement[]
               <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${styles.badge} mb-4`}>
                 {arr.tier === "basis" ? "Instap" : arr.tier === "midden" ? "Populair" : "Premium"}
               </span>
-              <h5 className="font-heading text-xl font-semibold text-navy-900 mb-2">{arr.name}</h5>
-              <p className="text-navy-600 text-sm mb-4">{arr.description}</p>
+              <h5 className="font-heading text-xl font-semibold text-cascade-navy mb-2">{arr.name}</h5>
+              <p className="text-text-secondary text-sm mb-4">{arr.description}</p>
               <ul className="space-y-2">
                 {arr.includes.map((item) => (
-                  <li key={item} className="text-sm text-navy-600 flex items-start gap-2">
+                  <li key={item} className="text-sm text-text-secondary flex items-start gap-2">
                     <span className={styles.icon}>&#10003;</span>{item}
                   </li>
                 ))}

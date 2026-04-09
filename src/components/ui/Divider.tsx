@@ -16,15 +16,15 @@ export function Divider({ variant = "line", className = "" }: DividerProps) {
   if (variant === "dots") {
     return (
       <div className={`flex justify-center gap-2 py-8 ${className}`}>
-        <span className="w-1.5 h-1.5 rounded-full bg-navy-300" />
-        <span className="w-1.5 h-1.5 rounded-full bg-navy-300" />
-        <span className="w-1.5 h-1.5 rounded-full bg-navy-300" />
+        <span className="w-1.5 h-1.5 rounded-full bg-cascade-gold/40" />
+        <span className="w-1.5 h-1.5 rounded-full bg-cascade-gold/40" />
+        <span className="w-1.5 h-1.5 rounded-full bg-cascade-gold/40" />
       </div>
     );
   }
   return (
     <div className={`flex justify-center py-8 ${className}`}>
-      <div className="w-16 h-px bg-navy-300" />
+      <div className="w-16 h-px bg-cascade-gold/30" />
     </div>
   );
 }

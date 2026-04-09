@@ -11,6 +11,7 @@ import { deelvraag1 } from "@/content/deelvraag1";
 import { deelvraag2 } from "@/content/deelvraag2";
 import { deelvraag3 } from "@/content/deelvraag3";
 import type { DeelvraagContent } from "@/content/types";
+import { deelvraagMeta } from "@/content/metadata";
 
 import {
   Dv1Probleem,
@@ -58,6 +59,9 @@ export default async function DeelvraagPage({
 
   if (!content) notFound();
 
+  const meta = deelvraagMeta.find((m) => m.slug === slug);
+  const badgeVariant = slug === "1" ? "green" : slug === "2" ? "navy" : "gold";
+
   const lastSection = content.sections[content.sections.length - 1];
   const bodySections = content.sections.slice(0, -1);
 
@@ -69,6 +73,8 @@ export default async function DeelvraagPage({
         number={content.number}
         title={content.title}
         subtitle={content.question}
+        categoryColor={meta?.colors.primary}
+        categoryBg={meta?.colors.bg}
       />
 
       <div className="bg-warm-50">
@@ -83,6 +89,7 @@ export default async function DeelvraagPage({
                     id={section.id}
                     title={section.title}
                     badge={`Deelvraag ${content.number}`}
+                    badgeVariant={badgeVariant}
                   />
                   <TextBlock>
                     <div className="space-y-5">
@@ -115,6 +122,7 @@ export default async function DeelvraagPage({
                   id={`${lastSection.id}-heading`}
                   title={lastSection.title}
                   badge="Conclusie"
+                  badgeVariant={badgeVariant}
                 />
                 <ConclusionBox title={lastSection.title}>
                   {lastSection.paragraphs.map((p, i) => (

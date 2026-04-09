@@ -23,7 +23,7 @@ export function RevenueCalculation({ title, steps, result, description }: Revenu
   const { ref, isInView } = useInView();
 
   return (
-    <div ref={ref} className="my-12 bg-gradient-to-br from-navy-900 to-navy-800 rounded-2xl p-8 md:p-10 text-white">
+    <div ref={ref} className="my-12 bg-gradient-to-br from-cascade-navy to-events-mid rounded-2xl p-8 md:p-10 text-white">
       <h4 className="font-heading text-xl md:text-2xl mb-6">{title}</h4>
       <div className="flex flex-wrap items-center justify-center gap-3 text-2xl md:text-3xl font-number">
         {steps.map((step, i) => (
@@ -34,12 +34,12 @@ export function RevenueCalculation({ title, steps, result, description }: Revenu
             transition={{ delay: i * 0.3, duration: 0.5 }}
             className="flex items-center gap-3"
           >
-            {i > 0 && <span className="text-navy-400">&times;</span>}
+            {i > 0 && <span className="text-events-mid">&times;</span>}
             <div className="text-center">
-              <div className="text-water-400">
+              <div className="text-warm-100">
                 <AnimatedCounter target={step.value} prefix={step.prefix} suffix={step.suffix} format={step.format} duration={1500} />
               </div>
-              <div className="text-xs text-navy-400 mt-1">{step.label}</div>
+              <div className="text-xs text-warm-100/70 mt-1">{step.label}</div>
             </div>
           </motion.div>
         ))}
@@ -49,12 +49,12 @@ export function RevenueCalculation({ title, steps, result, description }: Revenu
           transition={{ delay: steps.length * 0.3, duration: 0.5 }}
           className="flex items-center gap-3"
         >
-          <span className="text-navy-400">=</span>
+          <span className="text-events-mid">=</span>
           <div className="text-center">
-            <div className="text-gold-400 text-3xl md:text-4xl font-bold">
+            <div className="text-cascade-gold text-3xl md:text-4xl font-bold">
               <AnimatedCounter target={result.value} format="currency" duration={2000} />
             </div>
-            <div className="text-xs text-navy-400 mt-1">{result.label}</div>
+            <div className="text-xs text-warm-100/70 mt-1">{result.label}</div>
           </div>
         </motion.div>
       </div>
@@ -63,7 +63,7 @@ export function RevenueCalculation({ title, steps, result, description }: Revenu
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: (steps.length + 1) * 0.3 }}
-          className="text-navy-300 text-sm mt-6 text-center max-w-xl mx-auto"
+          className="text-warm-100/70 text-sm mt-6 text-center max-w-xl mx-auto"
         >
           {description}
         </motion.p>

@@ -1,36 +1,54 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-950: #0B1120;
-  --color-navy-900: #0F172A;
-  --color-navy-800: #1E293B;
-  --color-navy-700: #334155;
-  --color-navy-600: #475569;
-  --color-navy-500: #64748B;
-  --color-navy-400: #94A3B8;
-  --color-navy-300: #CBD5E1;
-  --color-navy-200: #E2E8F0;
-  --color-navy-100: #F1F5F9;
-  --color-navy-50: #F8FAFC;
+  /* ── Cascade Brand Colors ── */
 
-  --color-water-600: #2563EB;
-  --color-water-500: #3B82F6;
-  --color-water-400: #60A5FA;
-  --color-water-300: #93C5FD;
-  --color-water-200: #BFDBFE;
-  --color-water-100: #DBEAFE;
+  /* Primary brand */
+  --color-cascade-navy: #092D61;
+  --color-cascade-gold: #B49253;
+  --color-cascade-gold-dark: #8E7649;
 
-  --color-gold-600: #D97706;
-  --color-gold-500: #F59E0B;
-  --color-gold-400: #FBBF24;
-  --color-gold-300: #FDE68A;
+  /* Events category (navy) */
+  --color-events: #092D61;
+  --color-events-mid: #49648A;
+  --color-events-bg: #DAE0E8;
 
-  --color-warm-50: #FAFAF8;
-  --color-warm-100: #F5F5F0;
+  /* Groepsuitjes category (gold) */
+  --color-groep: #8E7649;
+  --color-groep-mid: #9A8F79;
+  --color-groep-bg: #E8E1D6;
 
-  --font-heading: "Fraunces", serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  /* Rondvaarten category (green) */
+  --color-varen: #586C56;
+  --color-varen-mid: #889876;
+  --color-varen-bg: #DBE4DA;
+
+  /* Seizoensspecials category (teal) */
+  --color-seizoen: #1D5577;
+  --color-seizoen-mid: #58819A;
+  --color-seizoen-bg: #ABC9D4;
+
+  /* Neutral backgrounds */
+  --color-warm-50: #F9F7F5;
+  --color-warm-100: #EDECEA;
+
+  /* CTA */
+  --color-cta: #A6CBA6;
+  --color-cta-border: #092D61;
+
+  /* Text hierarchy */
+  --color-text: #092D61;
+  --color-text-secondary: #49648A;
+  --color-text-muted: #9A8F79;
+  --color-text-light: #F9F7F5;
+
+  /* Borders */
+  --color-border: #EDECEA;
+  --color-border-dark: #DAE0E8;
+
+  /* Fonts — Cascade huisstijl */
+  --font-heading: "Baloo Thambi 2", cursive;
+  --font-body: "Poppins", sans-serif;
 }
 
 @layer base {
@@ -41,19 +59,19 @@
   }
   body {
     font-family: var(--font-body);
-    color: var(--color-navy-900);
+    color: var(--color-text);
     background-color: var(--color-warm-50);
     line-height: 1.75;
+    font-weight: 400;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-heading);
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.2;
-    letter-spacing: -0.02em;
   }
   ::selection {
-    background-color: var(--color-water-200);
-    color: var(--color-navy-900);
+    background-color: var(--color-events-bg);
+    color: var(--color-cascade-navy);
   }
 }
 
@@ -73,18 +91,6 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, var(--color-water-400), var(--color-water-600));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.font-number {
-  font-family: var(--font-mono);
-  font-variant-numeric: tabular-nums;
 }
 
 @keyframes fade-in {

@@ -1,12 +1,14 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
-    <footer className="bg-navy-900 text-navy-400 py-16">
+    <footer className="bg-cascade-navy text-warm-100/60 py-16">
       <div className="container-narrow text-center">
-        <h3 className="font-heading text-white text-xl mb-2">De Vloot Vol Groei</h3>
-        <p className="text-sm">Onderzoek naar doelgroepbereik en merkversterking bij Rederij Cascade</p>
+        <Image src="/logo/cascade-links.svg" alt="Cascade" width={180} height={40} className="mx-auto mb-4 brightness-0 invert" />
+        <p className="text-sm">Onderzoek naar doelgroepbereik en merkversterking</p>
         <div className="mt-6 text-sm">
-          <p>Daan Bocken &amp; Lucas van de Runstraat</p>
-          <p className="text-navy-500 mt-1">Profielwerkstuk 2026</p>
+          <p className="text-warm-100/80">Daan Bocken &amp; Lucas van de Runstraat</p>
+          <p className="text-warm-100/40 mt-1">Profielwerkstuk 2026</p>
         </div>
       </div>
     </footer>

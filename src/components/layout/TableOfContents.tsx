@@ -9,8 +9,8 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
 
   return (
     <nav className="hidden lg:block sticky top-20 w-56 shrink-0 self-start">
-      <div className="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-3">Inhoud</div>
-      <ul className="space-y-1 border-l border-navy-200">
+      <div className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-3">Inhoud</div>
+      <ul className="space-y-1 border-l border-border">
         {items.map((item) => {
           const isActive = activeId === item.id;
           return (
@@ -18,8 +18,8 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
               <a href={`#${item.id}`}
                 className={`block pl-4 py-1 text-sm border-l-2 -ml-px transition-colors ${
                   isActive
-                    ? "border-water-500 text-water-600 font-medium"
-                    : "border-transparent text-navy-500 hover:text-navy-700 hover:border-navy-300"
+                    ? "border-cascade-gold text-cascade-navy font-medium"
+                    : "border-transparent text-text-muted hover:text-cascade-navy hover:border-cascade-gold/50"
                 }`}
               >{item.label}</a>
             </li>

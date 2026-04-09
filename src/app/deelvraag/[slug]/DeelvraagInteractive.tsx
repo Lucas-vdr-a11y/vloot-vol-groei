@@ -261,19 +261,19 @@ export function Dv2Concurrentie() {
           {
             label: "Functionele vergaderlocaties",
             percentage: 40,
-            color: "#94A3B8",
+            color: "#9A8F79",
             description: "Business hotels — efficiënt, weinig beleving",
           },
           {
             label: "Inspirerende locaties",
             percentage: 50,
-            color: "#38BDF8",
+            color: "#49648A",
             description: "Beachclubs, kasteelhoeven — bijzondere sfeer",
           },
           {
             label: "Exclusieve high-end locaties",
             percentage: 10,
-            color: "#F59E0B",
+            color: "#B49253",
             description: "Kastelen, musea — alles draait om beleving",
           },
         ]}
@@ -342,15 +342,15 @@ export function Dv2Positionering() {
           },
         ]}
       />
-      <div className="my-12 bg-water-100/50 border border-water-200 rounded-xl p-8">
-        <p className="text-xs font-semibold text-water-600 uppercase tracking-wider mb-3">
+      <div className="my-12 bg-events-bg/50 border border-border-dark rounded-xl p-8">
+        <p className="text-xs font-semibold text-cascade-gold uppercase tracking-wider mb-3">
           Kernbelofte
         </p>
-        <p className="font-heading text-xl md:text-2xl text-navy-900 leading-relaxed">
+        <p className="font-heading text-xl md:text-2xl text-cascade-navy leading-relaxed">
           &ldquo;Rederij Cascade is dé vergader- en eventlocatie op het water voor organisaties die
           focus, verbinding en beleving willen combineren.&rdquo;
         </p>
-        <p className="text-navy-600 text-sm mt-4">
+        <p className="text-text-secondary text-sm mt-4">
           In communicatie spreken we over{" "}
           <em>&lsquo;een strategiedag op het water&rsquo;</em> of{" "}
           <em>&lsquo;vergaderen zonder afleiding&rsquo;</em> — niet over &lsquo;boottocht met

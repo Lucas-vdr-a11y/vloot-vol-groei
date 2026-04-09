@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
+import { Poppins, Baloo_Thambi_2 } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-body",
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const balooThambi = Baloo_Thambi_2({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-heading",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
   display: "swap",
 });
 
@@ -32,10 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="nl"
-      className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable}`}
-    >
+    <html lang="nl" className={`${poppins.variable} ${balooThambi.variable}`}>
       <body>{children}</body>
     </html>
   );
