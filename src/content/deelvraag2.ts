@@ -90,6 +90,15 @@ export const deelvraag2: DeelvraagContent = {
         "Advies: Maak op de homepage en in het menu een duidelijke aparte propositie voor de zakelijke events. Positioneer zakelijke events niet als \"ook mogelijk\" maar als volwaardige specialisatie. Gebruik hiervoor beelden van zakelijke evenementen. Zorg voor een duidelijke pagina met alle praktische informatie die belangrijk is voor de B2B markt: geschikt voor (vergadering, presentatie, training, relatiedag), capaciteit per schip, faciliteiten aan boord (AV, wifi, break-outs), bereikbaarheid & parkeren. Zorg voor reviews van zakelijke contacten.",
         "Potentiële zakelijke klanten oriënteren zich vaak online voordat zij een locatie boeken. SEO en GEO zorgen ervoor dat Rederij Cascade gevonden wordt. SEO (Search Engine Optimization) zorgt ervoor dat Rederij Cascade hoog in Google verschijnt op zoektermen als vergaderen op het water, zakelijk event Limburg of relatiedag op unieke locatie. GEO (Generative Engine Optimization) richt zich op zichtbaarheid in AI-zoekomgevingen zoals Copilot en ChatGPT.",
         "Secretaresses en managementassistenten spelen vaak een sleutelrol bij de organisatie en locatiekeuze van zakelijke bijeenkomsten. Om hen kennis te laten maken met Rederij Cascade en alle mogelijkheden voor zakelijke events, stellen we voor een kennismakingsmiddag te organiseren.",
+        "Daarnaast moet de zakelijke LinkedIn pagina actief ingezet worden om de B2B doelgroep te bereiken.",
+      ],
+    },
+    {
+      id: "dv2-afweging",
+      title: "Afweging en keuze",
+      paragraphs: [
+        "Marketing plan ontwikkelen gericht op de zakelijke markt. Een marketingplan is cruciaal voor het slagen op de zakelijke markt. Dit is de basis voor alle stappen die genomen moeten worden. Daarom hebben we als eerste stap een marketingplan opgesteld voor het benaderen van de B2B markt (zie bijlage). De informatie uit dit verslag dient als basis voor dit plan.",
+        "Website en online vindbaarheid. De combinatie van een website waarop de zakelijke markt evenveel aandacht krijgt als de toeristische markt en heel goede online vindbaarheid is heel belangrijk.",
       ],
     },
   ],
