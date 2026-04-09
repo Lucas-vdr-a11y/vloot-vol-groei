@@ -153,27 +153,27 @@ export function Dv1Plan() {
       <ArrangementCards
         arrangements={[
           {
-            name: "Het Ontdek-arrangement",
+            name: "Het Verkenner-arrangement",
             tier: "basis",
             description:
-              "Een rondvaart in combinatie met koffie en gebak. Geschikt voor een ochtend of middag.",
-            includes: ["Rondvaart", "Koffie & gebak", "Laagdrempelig instapmodel"],
+              "Maasparel Tocht met Limburgse vlaai inclusief koffie of thee. Geschikt voor een ochtend of middag.",
+            includes: ["Maasparel Tocht", "Limburgse vlaai", "Koffie of thee"],
             image: "/images/arrangement-ontdek.png",
           },
           {
             name: "Het Genieter-arrangement",
             tier: "midden",
             description:
-              "Een rondvaart met een uitgebreide brunch of lunch, gericht op gezinnen en stellen.",
-            includes: ["Rondvaart", "Uitgebreide brunch of lunch", "Halve dag programma"],
+              "Maasparel Tocht met lunchdeal, gericht op gezinnen en stellen.",
+            includes: ["Maasparel Tocht", "Uitgebreide lunchdeal"],
             image: "/images/arrangement-genieter.png",
           },
           {
             name: "Het Verwenner-arrangement",
             tier: "premium",
             description:
-              "Een rondvaart met high tea, het premium arrangement voor speciale momenten.",
-            includes: ["Rondvaart", "High tea", "Premium beleving op het water"],
+              "High Tea op het water, het premium arrangement voor speciale momenten.",
+            includes: ["Rondvaart", "Volledige High Tea"],
             image: "/images/arrangement-verwenner.png",
           },
         ]}
