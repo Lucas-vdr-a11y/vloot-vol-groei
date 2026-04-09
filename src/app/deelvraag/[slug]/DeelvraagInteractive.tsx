@@ -754,6 +754,24 @@ export function Dv3Uitvoering() {
         </div>
       </FadeIn>
 
+      <FadeIn>
+        <div className="my-12 border-l-4 border-seizoen pl-6">
+          <h4 className="font-heading text-2xl text-cascade-navy mb-2">Beschikbaarheidsrichtlijnen</h4>
+          <p className="text-text-secondary text-sm">Overzichtelijke PDF met verwachtingen per seizoen — richtlijnen, geen harde eisen</p>
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div className="my-8 flex justify-center">
+          <Image
+            src="/images/beschikbaarheidsrichtlijnen.png"
+            alt="Beschikbaarheidsrichtlijnen 2026"
+            width={500}
+            height={707}
+            className="rounded-xl border border-border shadow-sm"
+          />
+        </div>
+      </FadeIn>
+
       <CTABanner
         title="Bekijk de vacaturewebsite"
         description="Op werkenbijcascade.nl vindt u alle vacatures, het sollicitatieformulier, de loontabellen en de informatiepagina's."
