@@ -77,7 +77,10 @@ export default async function DeelvraagPage({
   const badgeVariant = slug === "1" ? "green" : slug === "2" ? "navy" : "gold";
 
   const lastSection = content.sections[content.sections.length - 1];
-  const bodySections = content.sections.slice(0, -1);
+  const isConclusie = lastSection.id.includes("conclusie");
+  const bodySections = isConclusie
+    ? content.sections.slice(0, -1)
+    : content.sections;
 
   const tocItems = content.sections.map((s) => ({ id: s.id, label: s.title }));
 
@@ -142,20 +145,22 @@ export default async function DeelvraagPage({
                 </div>
               ))}
 
-              {/* Conclusion section */}
-              <div id={lastSection.id} className="scroll-mt-24 mb-20">
-                <SectionHeading
-                  id={`${lastSection.id}-heading`}
-                  title={lastSection.title}
-                  badge="Conclusie"
-                  badgeVariant={badgeVariant}
-                />
-                <ConclusionBox title={lastSection.title}>
-                  {lastSection.paragraphs.map((p, i) => (
-                    <p key={i}>{p}</p>
-                  ))}
-                </ConclusionBox>
-              </div>
+              {/* Conclusion section — only rendered when last section is a conclusie */}
+              {isConclusie && (
+                <div id={lastSection.id} className="scroll-mt-24 mb-20">
+                  <SectionHeading
+                    id={`${lastSection.id}-heading`}
+                    title={lastSection.title}
+                    badge="Conclusie"
+                    badgeVariant={badgeVariant}
+                  />
+                  <ConclusionBox title={lastSection.title}>
+                    {lastSection.paragraphs.map((p, i) => (
+                      <p key={i}>{p}</p>
+                    ))}
+                  </ConclusionBox>
+                </div>
+              )}
             </article>
           </div>
         </div>
