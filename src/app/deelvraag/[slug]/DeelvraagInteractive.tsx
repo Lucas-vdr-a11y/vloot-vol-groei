@@ -103,7 +103,7 @@ export function Dv1Plan() {
   return (
     <>
       <ThreePillars
-        title="De drie pijlers van het plan"
+        title="De drie onderdelen van het plan"
         pillars={[
           {
             icon: Handshake,
@@ -162,8 +162,8 @@ export function Dv1Plan() {
             name: "Het Verwenner-arrangement",
             tier: "premium",
             description:
-              "Een rondvaart met high tea of een 3-gangendiner, het premium arrangement voor speciale momenten.",
-            includes: ["Rondvaart", "High tea of 3-gangendiner", "Premium beleving op het water"],
+              "Een rondvaart met high tea, het premium arrangement voor speciale momenten.",
+            includes: ["Rondvaart", "High tea", "Premium beleving op het water"],
           },
         ]}
       />
@@ -320,7 +320,7 @@ export function Dv2Positionering() {
         gesprekken.&rdquo;
       </PullQuote>
       <ThreePillars
-        title="De drie pijlers van de B2B positionering"
+        title="De drie onderdelen van de B2B positionering"
         pillars={[
           {
             icon: Focus,

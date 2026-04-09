@@ -100,3 +100,81 @@
 .animate-fade-in {
   animation: fade-in 0.5s ease-out;
 }
+
+/* ── Animation Utilities ── */
+
+@layer utilities {
+  /* Card hover lift — add to any card for premium hover */
+  .card-hover {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+                box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px -8px rgba(9, 45, 97, 0.12),
+                0 4px 12px -4px rgba(9, 45, 97, 0.08);
+  }
+
+  /* Icon hover — subtle scale + rotate */
+  .icon-hover {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .icon-hover:hover, .group:hover .group-icon-hover {
+    transform: scale(1.15) rotate(6deg);
+  }
+
+  /* Link underline expand */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-cascade-gold);
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .link-underline:hover::after {
+    width: 100%;
+  }
+}
+
+/* ── Custom Keyframes ── */
+
+@keyframes draw-line {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(180, 146, 83, 0); }
+  50% { box-shadow: 0 0 0 8px rgba(180, 146, 83, 0.15); }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* ── Reduced Motion ── */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .card-hover:hover {
+    transform: none;
+  }
+}

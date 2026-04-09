@@ -26,8 +26,8 @@ export function ThreePillars({ title, pillars }: ThreePillarsProps) {
           const Icon = pillar.icon;
           return (
             <FadeIn key={pillar.title} delay={i * 0.15}>
-              <div className="text-center p-6 rounded-xl bg-white border border-border shadow-sm h-full">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-events-bg text-cascade-navy mb-4">
+              <div className="text-center p-6 rounded-xl bg-white border border-border shadow-sm h-full card-hover">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-events-bg text-cascade-navy mb-4 icon-hover">
                   <Icon size={28} />
                 </div>
                 <h5 className="font-heading text-lg font-semibold text-cascade-navy mb-2">{pillar.title}</h5>

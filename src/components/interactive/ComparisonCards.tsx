@@ -24,7 +24,7 @@ export function ComparisonCards({ title, items }: ComparisonCardsProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {items.map((item, i) => (
           <FadeIn key={item.name} delay={i * 0.1}>
-            <div className={`rounded-xl p-6 border h-full ${
+            <div className={`rounded-xl p-6 border h-full card-hover ${
               item.highlight
                 ? "bg-cta/10 border-cta ring-2 ring-cta/30"
                 : "bg-white border-border"

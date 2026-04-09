@@ -16,7 +16,7 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
           return (
             <li key={item.id}>
               <a href={`#${item.id}`}
-                className={`block pl-4 py-1 text-sm border-l-2 -ml-px transition-colors ${
+                className={`block pl-4 py-1 text-sm border-l-2 -ml-px transition-all duration-300 ${
                   isActive
                     ? "border-cascade-gold text-cascade-navy font-medium"
                     : "border-transparent text-text-muted hover:text-cascade-navy hover:border-cascade-gold/50"

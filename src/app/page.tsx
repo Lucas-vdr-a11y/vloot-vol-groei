@@ -84,10 +84,10 @@ export default function HomePage() {
                   <FadeIn key={card.slug} delay={i * 0.1}>
                     <Link
                       href={`/deelvraag/${card.slug}`}
-                      className="group flex flex-col h-full bg-white rounded-2xl border border-border shadow-sm hover:shadow-md hover:border-cascade-gold/50 transition-all duration-300 p-8"
+                      className="group flex flex-col h-full bg-white rounded-2xl border border-border shadow-sm card-hover transition-all duration-300 p-8"
                     >
                       <div
-                        className="inline-flex items-center justify-center w-12 h-12 rounded-full mb-5 transition-transform group-hover:scale-110"
+                        className="inline-flex items-center justify-center w-12 h-12 rounded-full mb-5 icon-hover"
                         style={{ backgroundColor: card.bgColor, color: card.color }}
                       >
                         <Icon size={24} />
@@ -101,8 +101,8 @@ export default function HomePage() {
                       <p className="text-text-secondary text-sm leading-relaxed flex-1">
                         {card.question}
                       </p>
-                      <div className="mt-6 flex items-center gap-2 text-cascade-gold text-sm font-medium group-hover:gap-3 transition-all">
-                        Lees meer <ArrowRight size={16} />
+                      <div className="mt-6 flex items-center gap-2 text-cascade-gold text-sm font-medium">
+                        Lees meer <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                       </div>
                     </Link>
                   </FadeIn>

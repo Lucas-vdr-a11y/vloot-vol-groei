@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 const links = [
@@ -29,29 +30,58 @@ export function Navbar() {
             const isActive = pathname === link.href;
             return (
               <Link key={link.href} href={link.href}
-                className={`px-3 py-1.5 rounded-md text-sm transition-colors ${
+                className={`px-3 py-1.5 rounded-md text-sm transition-all duration-200 link-underline ${
                   isActive ? "bg-cascade-gold/20 text-cascade-gold" : "text-warm-100/70 hover:text-white hover:bg-white/5"
                 }`}
               >{link.label}</Link>
             );
           })}
         </div>
-        <button className="md:hidden text-warm-100/70 hover:text-white" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
+        <button
+          className="md:hidden text-warm-100/70 hover:text-white transition-colors"
+          onClick={() => setOpen(!open)}
+        >
+          <motion.div
+            animate={{ rotate: open ? 90 : 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </motion.div>
         </button>
       </div>
-      {open && (
-        <div className="md:hidden bg-cascade-navy border-t border-events-mid/30 px-4 pb-4">
-          {links.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link key={link.href} href={link.href} onClick={() => setOpen(false)}
-                className={`block px-3 py-2 rounded-md text-sm ${isActive ? "text-cascade-gold" : "text-warm-100/70"}`}
-              >{link.label}</Link>
-            );
-          })}
-        </div>
-      )}
+
+      {/* Animated mobile menu */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
+            className="md:hidden bg-cascade-navy border-t border-events-mid/30 overflow-hidden"
+          >
+            <div className="px-4 pb-4 pt-2">
+              {links.map((link, i) => {
+                const isActive = pathname === link.href;
+                return (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05, duration: 0.2 }}
+                  >
+                    <Link href={link.href} onClick={() => setOpen(false)}
+                      className={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                        isActive ? "text-cascade-gold" : "text-warm-100/70 hover:text-white"
+                      }`}
+                    >{link.label}</Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

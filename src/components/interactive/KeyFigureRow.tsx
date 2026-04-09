@@ -21,7 +21,7 @@ export function KeyFigureRow({ figures }: KeyFigureRowProps) {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
       {figures.map((figure, i) => (
         <FadeIn key={figure.label} delay={i * 0.15}>
-          <div className="bg-white rounded-xl p-6 border border-border shadow-sm text-center">
+          <div className="bg-white rounded-xl p-6 border border-border shadow-sm text-center card-hover">
             <div className="text-3xl md:text-4xl font-bold text-cascade-gold mb-2">
               <AnimatedCounter
                 target={figure.value}

@@ -22,7 +22,7 @@ export function ArrangementCards({ arrangements }: { arrangements: Arrangement[]
         const styles = tierStyles[arr.tier];
         return (
           <FadeIn key={arr.name} delay={i * 0.15}>
-            <div className={`rounded-xl border-2 ${styles.border} p-6 h-full bg-white relative`}>
+            <div className={`rounded-xl border-2 ${styles.border} p-6 h-full bg-white relative card-hover`}>
               <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${styles.badge} mb-4`}>
                 {arr.tier === "basis" ? "Instap" : arr.tier === "midden" ? "Populair" : "Premium"}
               </span>

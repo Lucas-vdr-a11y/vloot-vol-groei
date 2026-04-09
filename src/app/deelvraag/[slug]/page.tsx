@@ -88,8 +88,6 @@ export default async function DeelvraagPage({
                   <SectionHeading
                     id={section.id}
                     title={section.title}
-                    badge={`Deelvraag ${content.number}`}
-                    badgeVariant={badgeVariant}
                   />
                   <TextBlock>
                     <div className="space-y-5">
