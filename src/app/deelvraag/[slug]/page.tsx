@@ -27,6 +27,8 @@ import {
   Dv2Probleem,
   Dv2Situatie,
   Dv2Doelgroep,
+  Dv2Ideeen,
+  Dv2Afweging,
   Dv3Concurrentie,
   Dv3Plan,
   Dv3Probleem,
@@ -129,6 +131,8 @@ export default async function DeelvraagPage({
                   {slug === "2" && section.id === "dv2-probleem" && <Dv2Probleem />}
                   {slug === "2" && section.id === "dv2-situatie" && <Dv2Situatie />}
                   {slug === "2" && section.id === "dv2-doelgroep" && <Dv2Doelgroep />}
+                  {slug === "2" && section.id === "dv2-ideeen" && <Dv2Ideeen />}
+                  {slug === "2" && section.id === "dv2-afweging" && <Dv2Afweging />}
 
                   {/* Interactive components for Deelvraag 3 */}
                   {slug === "3" && section.id === "dv3-concurrentie" && <Dv3Concurrentie />}

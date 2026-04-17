@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Handshake, Eye, Globe, Focus, HeartHandshake, Sparkles, Briefcase, UserCheck, Building2, User, UserCog, Clock, GraduationCap, Heart, List, BookOpen, DollarSign, Users2, Settings, FileText, LayoutDashboard, FormInput, Gift, Palette, Mail, Send, Languages, ShoppingCart, CreditCard, UserPlus, BarChart3 } from "lucide-react";
+import { Handshake, Eye, Globe, Focus, HeartHandshake, Sparkles, Briefcase, UserCheck, Building2, User, UserCog, Clock, GraduationCap, Heart, List, BookOpen, DollarSign, Users2, Settings, FileText, LayoutDashboard, FormInput, Gift, Palette, Mail, Send, Languages, ShoppingCart, CreditCard, UserPlus, BarChart3, Lightbulb, Network, Megaphone, ClipboardList, Award, MessageSquare, Star } from "lucide-react";
 
 import { KeyFigureRow } from "@/components/interactive/KeyFigureRow";
 import { RevenueCalculation } from "@/components/interactive/RevenueCalculation";
@@ -18,6 +18,10 @@ import { SeasonalChart } from "@/components/interactive/SeasonalChart";
 import { PersonaCards } from "@/components/interactive/PersonaCards";
 import { CTABanner } from "@/components/interactive/CTABanner";
 import { FeatureShowcase } from "@/components/interactive/FeatureShowcase";
+import { B2bArrangementCards } from "@/components/interactive/B2bArrangementCards";
+import { ContactChannels } from "@/components/interactive/ContactChannels";
+import { LoyaltyFlow } from "@/components/interactive/LoyaltyFlow";
+import { PriorityMatrix } from "@/components/interactive/PriorityMatrix";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 // ─── Deelvraag 1 ────────────────────────────────────────────────────────────
@@ -564,6 +568,268 @@ export function Dv2Doelgroep() {
           description: "Eigenaren, HR-medewerkers die incidenteel boeken.",
           behavior: "Minder ervaring met locatie zoeken.",
           needs: ["Overzichtelijk aanbod", "Persoonlijk contact"],
+        },
+      ]}
+    />
+  );
+}
+
+export function Dv2Ideeen() {
+  return (
+    <>
+      <B2bArrangementCards
+        title="Voorgestelde B2B-arrangementen"
+        arrangements={[
+          {
+            name: "Strategie in beweging",
+            tagline: "Strategiesessie",
+            icon: Briefcase,
+            accent: "events",
+            audience: "MT, directie",
+            priceMin: 100,
+            priceMax: 150,
+            includes: [
+              "Dagdeel vergaderen",
+              "Rondvaart",
+              "AV en flipover",
+              "Energizer",
+              "Vergaderarrangement catering incl. lunch",
+            ],
+          },
+          {
+            name: "Samen op koers",
+            tagline: "Heisessie",
+            icon: Users2,
+            accent: "gold",
+            audience: "Teams, afdelingen",
+            priceMin: 125,
+            priceMax: 175,
+            includes: [
+              "Volledige dag vergaderen in 2 ruimtes",
+              "Rondvaart",
+              "AV, geluid en flipovers",
+              "Catering incl. lunch en borrel",
+              "Energizer",
+              "Professionele facilitator",
+            ],
+          },
+          {
+            name: "Waardevolle ontmoetingen",
+            tagline: "Relatiedag",
+            icon: HeartHandshake,
+            accent: "groep",
+            audience: "Klantdagen, relaties",
+            priceMin: 125,
+            priceMax: 175,
+            includes: [
+              "Middagarrangement catering incl. lunch/diner en borrel",
+              "Rondvaart",
+              "AV en geluid",
+            ],
+          },
+          {
+            name: "After work op het water",
+            tagline: "Borrel met medewerkers",
+            icon: Sparkles,
+            accent: "varen",
+            audience: "Medewerkers",
+            priceMin: 50,
+            priceMax: 75,
+            includes: ["Rondvaart met drankjes en hapjes"],
+          },
+          {
+            name: "Innovatie aan boord",
+            tagline: "Productpresentatie",
+            icon: Lightbulb,
+            accent: "seizoen",
+            audience: "Lancering, klanten",
+            priceMin: 125,
+            priceMax: 175,
+            includes: [
+              "Dagdeel in 2 ruimtes",
+              "Rondvaart",
+              "Presentatieopstelling",
+              "AV en geluid",
+              "Cateringarrangement incl. lunch en borrel",
+            ],
+          },
+        ]}
+      />
+
+      <ContactChannels
+        title="Kanalen voor CRM-opbouw"
+        description="Contactgegevens van zakelijke klanten zijn via verschillende kanalen te verzamelen. Een eenvoudig CRM-systeem houdt alles overzichtelijk bij."
+        channels={[
+          {
+            icon: FormInput,
+            label: "Contactformulier",
+            description: "Leads die via de website binnenkomen worden automatisch in het CRM geregistreerd.",
+            cost: "Geen kosten",
+          },
+          {
+            icon: Network,
+            label: "LinkedIn",
+            description: "Actief zoeken op functies als management assistent en event manager binnen relevante bedrijven.",
+            cost: "Tijdsinvestering",
+          },
+          {
+            icon: Megaphone,
+            label: "LinkedIn & Google Ads",
+            description: "Gerichte campagnes voor zichtbaarheid bij de B2B doelgroep, met directe leadgeneratie.",
+            cost: "€ 2.000 – € 5.000 / jaar",
+          },
+          {
+            icon: Globe,
+            label: "Locatieplatforms",
+            description: "Aanwezigheid op Locaties.nl en inspirerendelocaties.nl levert gekwalificeerde aanvragen.",
+            cost: "Abonnement",
+          },
+          {
+            icon: Building2,
+            label: "Kamer van Koophandel",
+            description: "Bedrijfsadressen en e-mails aankopen voor gerichte acquisitie binnen de regio.",
+            cost: "Eenmalige aankoop",
+          },
+          {
+            icon: Mail,
+            label: "Nieuwsbrief",
+            description: "Periodieke updates over arrangementen en cases houden bestaande relaties warm.",
+            cost: "Lage kosten",
+          },
+        ]}
+      />
+
+      <LoyaltyFlow
+        title="Van eerste bezoek naar loyale klant"
+        steps={[
+          {
+            icon: Handshake,
+            label: "1e bezoek",
+            description: "Zakelijk event geboekt en uitgevoerd, contactmomenten in het CRM vastgelegd.",
+          },
+          {
+            icon: ClipboardList,
+            label: "Tevredenheidsenquête",
+            description: "Kort na het bezoek vragen we feedback en een review of quote.",
+            reward: "Review / quote",
+          },
+          {
+            icon: Gift,
+            label: "2e boeking",
+            description: "Terugkerende klant ontvangt een korting of een upgrade binnen het arrangement.",
+            reward: "Korting / upgrade",
+          },
+          {
+            icon: Award,
+            label: "3e boeking",
+            description: "Bij een derde boeking een extra voordeel — de relatie is nu structureel.",
+            reward: "Premium upgrade",
+          },
+          {
+            icon: UserPlus,
+            label: "Referentie",
+            description: "Klanten die Cascade aanbevelen bij andere organisaties worden beloond.",
+            reward: "Cadeau / korting",
+          },
+        ]}
+      />
+    </>
+  );
+}
+
+export function Dv2Afweging() {
+  return (
+    <PriorityMatrix
+      title="Prioritering van acties"
+      description="Klik op een actie om de afweging, impact en het advies te zien. Filter op prioriteit om direct te focussen op de belangrijkste stappen."
+      items={[
+        {
+          title: "Marketingplan B2B ontwikkelen",
+          consideration:
+            "Een marketingplan is cruciaal voor het slagen op de zakelijke markt en vormt de basis voor alle stappen die genomen moeten worden.",
+          impact: "Alleen tijd. De basis staat al in dit verslag.",
+          advice: "Marketingplan opgesteld voor het benaderen van de B2B markt (zie bijlage).",
+          priority: "hoog",
+        },
+        {
+          title: "Website aanpassen voor B2B",
+          consideration:
+            "Een goede website waar zakelijke klanten makkelijk vinden wat ze zoeken is heel belangrijk voor succes.",
+          impact:
+            "Interne marketing medewerker kan aanpassen. Professionele fotograaf eenmalig geschat op € 1.500.",
+          advice: "Hoge prioriteit — direct doorvoeren.",
+          priority: "hoog",
+        },
+        {
+          title: "SEO & GEO optimalisatie",
+          consideration:
+            "Goede SEO en GEO zorgen voor goede vindbaarheid. Als je de website aanpast op B2B, moet deze ook vindbaar zijn.",
+          impact:
+            "Eenmalig professionals inhuren + marketing medewerker instrueren. Kosten € 1.500 – € 2.000.",
+          advice: "Medium prioriteit — kan later ingezet worden.",
+          priority: "medium",
+        },
+        {
+          title: "Kennismakingsmiddag secretaresses",
+          consideration:
+            "Niets werkt zo goed als een persoonlijke kennismaking met de vloot. Vergroot vertrouwen en verlaagt de boekingsdrempel.",
+          impact:
+            "Alleen catering en personeelskosten + 30 uur voorbereiding.",
+          advice: "Medium prioriteit — uitnodiging en programma zijn al uitgewerkt (zie bijlage).",
+          priority: "medium",
+        },
+        {
+          title: "B2B-arrangementen opstellen",
+          consideration:
+            "Zakelijke klanten hebben andere behoeften dan toeristen. Heldere arrangementen verlagen de drempel en versnellen de beslissing.",
+          impact: "Alleen tijdsinvestering — uitwerken in de procedures van de vloot.",
+          advice: "Hoge prioriteit — 5 arrangementen voorgesteld in dit plan.",
+          priority: "hoog",
+        },
+        {
+          title: "Persoonlijke benadering & CRM",
+          consideration:
+            "B2B-klanten hechten waarde aan persoonlijk contact en een vast aanspreekpunt.",
+          impact:
+            "Tijdsinvestering sales & marketing. Lage CRM-kosten. Campagnes: € 2.000 – € 5.000 per jaar.",
+          advice:
+            "Hoge prioriteit — goede persoonlijke benadering leidt tot meer klanten en herhaalbezoeken.",
+          priority: "hoog",
+        },
+        {
+          title: "Herhaalbezoek & loyaliteit",
+          consideration:
+            "Terugkerende klanten leveren hogere omzet en lagere acquisitiekosten op.",
+          impact: "Beperkte kosten voor incentives + tijdsinvestering in relatiebeheer.",
+          advice: "Lage prioriteit — kan als een van de laatste acties opgepakt worden.",
+          priority: "laag",
+        },
+        {
+          title: "Samenwerking event- en congresbureaus",
+          consideration:
+            "Samenwerking met evenementen- en congresbureaus vergroot het bereik en zorgt voor nieuwe klanten.",
+          impact:
+            "Vooral tijd — opbouwen kost tijd. Eventueel lage kosten voor marketingmateriaal.",
+          advice:
+            "Medium prioriteit — lijst en introductie-e-mail al opgesteld.",
+          priority: "medium",
+        },
+        {
+          title: "LinkedIn actief inzetten",
+          consideration:
+            "LinkedIn is een belangrijk communicatiekanaal voor zakelijke klanten.",
+          impact:
+            "Tijdsinvestering marketing. Op langere termijn mogelijk kosten voor advertentiecampagne.",
+          advice: "Medium prioriteit — ondersteunend aan de website.",
+          priority: "medium",
+        },
+        {
+          title: "Extra diensten aanbieden",
+          consideration:
+            "Extra diensten zoals sprekers of teamactiviteiten verhogen de waarde per boeking.",
+          impact: "Inkoopkosten die je doorverkoopt — geen investering nodig.",
+          advice: "Lage prioriteit — kans om omzet te vergroten als de rest op orde is.",
+          priority: "laag",
         },
       ]}
     />
